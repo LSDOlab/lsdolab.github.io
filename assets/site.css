@@ -441,3 +441,10 @@
 
 /* Distribution statements inside the dark title band. */
 :root:is([data-alt=navy],[data-alt=whitebar]) .record-heading .public-release{color:#DCE5EF;font-size:13px;margin-top:10px}
+
+/* Phones and small tablets: brand on the first row, all nav links wrap on the rows below (nothing cut off). */
+@media(max-width:850px){
+  .header-inner{row-gap:10px}
+  .site-header nav{flex:0 0 100%;width:100%;overflow:visible;flex-wrap:wrap;justify-content:flex-start;gap:4px 20px}
+  .site-header nav a{white-space:nowrap}
+}
