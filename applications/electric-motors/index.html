@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en" data-design="ucsd-light-banner" data-alt="whitebar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Electric motors · LSDO Lab</title><meta name="description" content="Electromagnetic design and powertrain models for electric aircraft."><link rel="stylesheet" href="../../assets/site.css"><script defer src="../../assets/site.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html"><img class="brand-logo brand-logo--default" src="../../assets/brand/ucsd-mae-white.svg" alt="UC San Diego Mechanical and Aerospace Engineering"><img class="brand-logo brand-logo--ucsd-light" src="https://jacobsschool.ucsd.edu/sites/default/files/groups/jsoe/img/logos/mae/digital/UCSDLogo-JSOE-MechanicalandAerospaceEngineering-BlueGold.png" alt="UC San Diego Mechanical and Aerospace Engineering"><span class="brand-lab">LSDO Lab</span></a><nav aria-label="Main navigation"><a href="../../index.html" >Home</a><a href="../../methods/index.html" >Methods</a><a href="../index.html" aria-current="page">Applications</a><a href="../../software/index.html" >Software</a><a href="../../projects/index.html" >Funded projects</a><a href="../../publications/index.html" >Publications</a><a href="../../people/index.html" >People</a><a href="../../join/index.html" >Join</a></nav></div></header>
+<main id="main"><div class="wrap record record--research"><div class="record-heading"><a class="eyebrow" href="../index.html">Applications</a><p class="application-domain">Aerospace</p><h1>Electric motors</h1><p class="application-design-type">Shape design</p></div>
+
+<div class="prose"><p>We apply adjoint-based shape optimization to electric motors for aircraft propulsion. Motor geometry affects both machine mass and electrical efficiency, so a lighter motor must be assessed together with the battery mass needed to power the aircraft.</p>
+<h2>Connecting electromagnetic shape to aircraft mass</h2>
+<p>The study combines free-form geometry deformation, differentiable mesh warping, and finite-element electromagnetic analysis within an aircraft-mass objective. Its representative motor design reduces motor mass by 35% and increases efficiency relative to the baseline, demonstrating how detailed machine geometry can be optimized while accounting for system-level consequences.</p>
+<p>Paper: <a href="../../publications/scotzniovsky2025geometric/index.html">Scotzniovsky et al.</a> <a aria-label="Reference 1: Geometric design of electric motors using adjoint-based shape optimization" class="citation" href="#ref-scotzniovsky2025geometric">[1]</a></p></div>
+
+<figure class="research-figure"><video autoplay muted loop controls playsinline preload="metadata" aria-label="Optimization of a permanent-magnet electric motor, showing evolving cross-sectional geometry and performance."><source src="../../assets/page-media/application/electric-motors/motor-video-first-half.mp4" type="video/mp4">Your browser cannot play this video. <a href="../../assets/page-media/application/electric-motors/motor-video-first-half.mp4">Download video</a></video><figcaption><span class="caption-text">Adjoint-based optimization updates the permanent-magnet motor geometry while accounting for aircraft mass. <a aria-label="Reference 1: Geometric design of electric motors using adjoint-based shape optimization" class="citation" href="#ref-scotzniovsky2025geometric">[1]</a> <a href="../../publications/scotzniovsky2025geometric/index.html">Source paper</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/electric-motors/motor-shape-variables.png" aria-label="View full-size figure: Finite-element mesh of an electric-motor cross section with the rotor and stator shape variables labeled."><img src="../../assets/page-media/application/electric-motors/motor-shape-variables.png" alt="Finite-element mesh of an electric-motor cross section with the rotor and stator shape variables labeled." loading="lazy" ></a><figcaption><span class="caption-text">Cross-sectional shape variables parameterize the shaft, rotor, magnets, air gap, and stator. <a aria-label="Reference 1: Geometric design of electric motors using adjoint-based shape optimization" class="citation" href="#ref-scotzniovsky2025geometric">[1]</a> <a href="../../publications/scotzniovsky2025geometric/index.html">Source paper</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/electric-motors/motor-parameter-sweep.png" aria-label="View full-size figure: Parameter sweep comparing shape and baseline optimization across airframe masses for aircraft, motor, and battery mass and motor efficiency."><img src="../../assets/page-media/application/electric-motors/motor-parameter-sweep.png" alt="Parameter sweep comparing shape and baseline optimization across airframe masses for aircraft, motor, and battery mass and motor efficiency." loading="lazy" ></a><figcaption><span class="caption-text">Across the airframe-mass sweep, shape optimization reduces motor and battery mass while improving motor efficiency relative to the baseline formulation. <a aria-label="Reference 1: Geometric design of electric motors using adjoint-based shape optimization" class="citation" href="#ref-scotzniovsky2025geometric">[1]</a> <a href="../../publications/scotzniovsky2025geometric/index.html">Source paper</a></span></figcaption></figure>
+
+
+<section class="problem-section" aria-labelledby="problem-title">
+  <h2 id="problem-title">Optimization problem</h2>
+  <div class="problem-matrix-wrap" tabindex="0" aria-label="Scrollable optimization formulation table">
+    
+    
+    <table class="problem-formulation-table">
+      <caption>Optimization formulation</caption>
+      <thead>
+        <tr>
+          <th scope="col">Formulation element</th>
+          <th scope="col">Comprehensive motor design</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Case</th><td colspan="1">Permanent-magnet motor design with an aircraft-mass objective</td></tr>
+        <tr><th scope="row">Objective</th><td>Minimize total aircraft mass.</td></tr>
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Design variables</th></tr>
+        
+        <tr>
+          <th scope="row">Current amplitude, I_amp (100–600 A)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Motor length, L (60–80 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Shaft-radius change, r_shaft (−25 to 10 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Rotor-yoke-thickness change, y_r (−10 to 10 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Magnet-thickness change, t_m (−2 to 2 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Rotor–magnet-clearance change, δ_rm (−1 to 1 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Magnet-width change, θ_m (−0.14π/6 to 0.07π/6 rad)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Air-gap-thickness change, δ_ag (−1 to 1 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Stator-shoe-thickness change, t_st (−1 to 1 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Slot-thickness change, t_slot (−5 to 5 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Stator-yoke-thickness change, y_s (−10 to 5 mm)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Slot-width change, θ_s (−0.05π/18 to 0.05π/18 rad)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total design variables</th><td class="problem-count">12</td></tr>
+        
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Constraints</th></tr>
+        
+        <tr>
+          <th scope="row">Torque balance, τ_l = τ_r</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Voltage limit, V_lim ≤ 800 V</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total constraints</th><td class="problem-count">2</td></tr>
+        
+        
+        <tr><th scope="row">Models and conditions</th><td colspan="1">A permanent-magnet synchronous pusher motor for the NASA lift-plus-cruise reference aircraft; differentiable motor analyses and a range relation connecting motor efficiency to battery mass.</td></tr>
+        <tr><th scope="row">Representative source</th><td colspan="1"><a href="../../publications/scotzniovsky2025geometric/index.html">Geometric design of electric motors using adjoint-based shape optimization</a></td></tr>
+        <tr><th scope="row">Source locator</th><td colspan="1">Table 3 and Section 4.3.2.</td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+<section class="bibliography" id="references" aria-label="References"><h2>References</h2><ol><li id="ref-scotzniovsky2025geometric"><span>Luca Scotzniovsky, Ru Xiang, Zeyu Cheng, Gabriel Rodriguez, David Kamensky, Chris Mi, John T. Hwang.</span> <a href="../../publications/scotzniovsky2025geometric/index.html">Geometric design of electric motors using adjoint-based shape optimization</a>. <em>Optimization and Engineering</em>, 2025.<div class="paper-actions"><a href="https://doi.org/10.1007/s11081-024-09892-6">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/scotzniovsky2025geometric/scotzniovsky2025geometric--submitted-manuscript--35854aea95b1.pdf">PDF</a><pre hidden>@article{scotzniovsky2025geometric,
+  author = {Luca Scotzniovsky and Ru Xiang and Zeyu Cheng and Gabriel Rodriguez and David Kamensky and Chris Mi and John T. Hwang},
+  title = {Geometric design of electric motors using adjoint-based shape optimization},
+  journal = {Optimization and Engineering},
+  year = {2025},
+  volume = {26},
+  number = {1},
+  pages = {121-158},
+  doi = {10.1007/s11081-024-09892-6},
+  url = {https://doi.org/10.1007/s11081-024-09892-6},
+  note = {Metadata verification: Crossref DOI}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for Geometric design of electric motors using adjoint-based shape optimization">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li><li id="ref-cheng2023differentiable"><span>Zeyu Cheng, Shuofeng Zhao, Luca Scotzniovsky, Gabriel Rodriguez, Chris Mi, John T. Hwang.</span> <a href="../../publications/cheng2023differentiable/index.html">A Differentiable Method for Low-Fidelity Analysis of Permanent-Magnet Synchronous Motors</a>. <em>AIAA SciTech 2023 Forum</em>, 2023.<div class="paper-actions"><a href="https://lsdolab.github.io/lsdo-publications/pdf/cheng2023differentiable/cheng2023differentiable--submitted-manuscript--d92bde3de5e8.pdf">PDF</a><pre hidden>@inproceedings{cheng2023differentiable,
+  author = {Zeyu Cheng and Shuofeng Zhao and Luca Scotzniovsky and Gabriel Rodriguez and Chris Mi and John T. Hwang},
+  title = {A Differentiable Method for Low-Fidelity Analysis of Permanent-Magnet Synchronous Motors},
+  booktitle = {AIAA SciTech 2023 Forum},
+  year = {2023},
+  note = {Metadata verification: Crossref unavailable: HTTPError}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for A Differentiable Method for Low-Fidelity Analysis of Permanent-Magnet Synchronous Motors">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li><li id="ref-cheng2025cost"><span>Zeyu Cheng, Zhi Cao, Chris Mi, John T. Hwang.</span> <a href="../../publications/cheng2025cost/index.html">Cost Optimization of Electric Vertical Takeoff and Landing Aircraft Through Powertrain Modeling</a>. <em>Journal of Air Transportation</em>, 2025.<div class="paper-actions"><a href="https://doi.org/10.2514/1.d0487">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/cheng2025cost/cheng2025cost--publisher-version--c2ad1fe79a1f.pdf">PDF</a><pre hidden>@article{cheng2025cost,
+  author = {Zeyu Cheng and Zhi Cao and Chris Mi and John T. Hwang},
+  title = {Cost Optimization of Electric Vertical Takeoff and Landing Aircraft Through Powertrain Modeling},
+  journal = {Journal of Air Transportation},
+  year = {2025},
+  volume = {33},
+  number = {3},
+  pages = {285-296},
+  doi = {10.2514/1.d0487},
+  url = {https://doi.org/10.2514/1.d0487},
+  note = {Metadata verification: Crossref DOI}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for Cost Optimization of Electric Vertical Takeoff and Landing Aircraft Through Powertrain Modeling">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li></ol></section><section class="connections" aria-label="Research connected to Electric motors"><div class="connections-heading"><p class="eyebrow">Research connections</p><h2>Related to Electric motors</h2></div><div class="link-group link-group-method"><h3>Methods</h3><ul><li><a href="../../methods/geometry-parameterization/index.html">Geometry parameterization</a></li><li><a href="../../methods/nonlinear-programming/index.html">Nonlinear programming</a></li></ul></div><div class="link-group link-group-software"><h3>Software</h3><ul><li><a href="../../software/femo/index.html">feMo</a></li></ul></div><div class="link-group link-group-person"><h3>Authors of related work</h3><ul><li><a href="../../people/john-hwang/index.html">John T. Hwang</a></li><li><a href="../../people/luca-scotzniovsky/index.html">Luca Scotzniovsky</a></li></ul></div></section></div></main><footer><div><strong>Large-Scale Design Optimization Laboratory</strong><p>Department of Mechanical and Aerospace Engineering<br>University of California San Diego</p></div><div class="footer-links"><a href="../../join/index.html">Join the lab</a><a href="../../publications/index.html">Publications</a><a href="https://github.com/LSDOlab">GitHub</a></div></footer></body></html>

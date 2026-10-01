@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-design="ucsd-light-banner" data-alt="whitebar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Wind farms · LSDO Lab</title><meta name="description" content="Turbine placement to increase annual energy production in the presence of wake interactions."><link rel="stylesheet" href="../../assets/site.css"><script defer src="../../assets/site.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html"><img class="brand-logo brand-logo--default" src="../../assets/brand/ucsd-mae-white.svg" alt="UC San Diego Mechanical and Aerospace Engineering"><img class="brand-logo brand-logo--ucsd-light" src="https://jacobsschool.ucsd.edu/sites/default/files/groups/jsoe/img/logos/mae/digital/UCSDLogo-JSOE-MechanicalandAerospaceEngineering-BlueGold.png" alt="UC San Diego Mechanical and Aerospace Engineering"><span class="brand-lab">LSDO Lab</span></a><nav aria-label="Main navigation"><a href="../../index.html" >Home</a><a href="../../methods/index.html" >Methods</a><a href="../index.html" aria-current="page">Applications</a><a href="../../software/index.html" >Software</a><a href="../../projects/index.html" >Funded projects</a><a href="../../publications/index.html" >Publications</a><a href="../../people/index.html" >People</a><a href="../../join/index.html" >Join</a></nav></div></header>
+<main id="main"><div class="wrap record record--research"><div class="record-heading"><a class="eyebrow" href="../index.html">Applications</a><p class="application-domain">Wind energy</p><h1>Wind farms</h1><p class="application-design-type">Layout design</p></div>
+
+<div class="prose"><p>We apply gradient-based optimization to wind-farm layouts to increase annual energy production. Turbine locations alter coupled wake losses, making this application a test of how the treatment of implicit flow equations affects optimization cost.</p>
+<h2>Reducing analysis effort during optimization</h2>
+<p>In the nine-turbine comparison, a SURF variant reaches the same optimized layout and optimality tolerance about 25% faster than the reduced-space method. The result isolates a computational benefit of changing how analysis and optimization are coordinated; it does not imply that SURF always finds the same local optimum in this multimodal problem.</p>
+<p>Paper: <a href="../../publications/joshy2023sqp/index.html">Joshy et al.</a> <a aria-label="Reference 1: An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems" class="citation" href="#ref-joshy2023sqp">[1]</a></p></div>
+
+<figure class="research-figure"><video autoplay muted loop controls playsinline preload="metadata" aria-label="Animation of wind-turbine locations changing during wind-farm layout optimization."><source src="../../assets/page-media/application/wind-farm-layout/wind-farm-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="../../assets/page-media/application/wind-farm-layout/wind-farm-video.mp4">Download video</a></video><figcaption><span class="caption-text">Wind-farm layout optimization updates turbine locations to increase annual energy production in the presence of wake interactions. <a aria-label="Reference 1: An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems" class="citation" href="#ref-joshy2023sqp">[1]</a> <a href="../../publications/joshy2023sqp/index.html">Source paper</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/wind-farm-layout/wind-farm-surf.png" aria-label="View full-size figure: Paired chart comparing optimality convergence over time and final turbine locations for reduced-space optimization and SURF."><img src="../../assets/page-media/application/wind-farm-layout/wind-farm-surf.png" alt="Paired chart comparing optimality convergence over time and final turbine locations for reduced-space optimization and SURF." loading="lazy" ></a><figcaption><span class="caption-text">On a smaller nine-turbine wind-farm benchmark, SURF reaches the same local optimum about 25% faster than reduced-space optimization; the matching layouts verify the comparison. <a aria-label="Reference 1: An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems" class="citation" href="#ref-joshy2023sqp">[1]</a> <a href="../../publications/joshy2023sqp/index.html">Source paper</a></span></figcaption></figure>
+
+
+<section class="problem-section" aria-labelledby="problem-title">
+  <h2 id="problem-title">Optimization problem</h2>
+  <div class="problem-matrix-wrap" tabindex="0" aria-label="Scrollable optimization formulation table">
+    
+    
+    <table class="problem-formulation-table">
+      <caption>Optimization formulation</caption>
+      <thead>
+        <tr>
+          <th scope="col">Formulation element</th>
+          <th scope="col">Nine-turbine wind-farm layout</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Case</th><td colspan="1">Nine-turbine wind-farm layout</td></tr>
+        <tr><th scope="row">Objective</th><td>Maximize annual energy production (AEP).</td></tr>
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Design variables</th></tr>
+        
+        <tr>
+          <th scope="row">x coordinates for nine turbine locations</th>
+          <td class="problem-count">9</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">y coordinates for nine turbine locations</th>
+          <td class="problem-count">9</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total design variables</th><td class="problem-count">18</td></tr>
+        
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Constraints</th></tr>
+        
+        <tr>
+          <th scope="row">Pairwise spacing at least 1.8 rotor diameters (9 choose 2)</th>
+          <td class="problem-count">36</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Site-boundary feasibility for nine turbine locations</th>
+          <td class="problem-count">9</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total constraints</th><td class="problem-count">45</td></tr>
+        
+        <tr class="problem-matrix-note"><th scope="row">Constraint count note</th><td>Total is calculated from the nine-turbine formulation in Equation 25: 36 pairwise spacing constraints and 9 boundary constraints.</td></tr>
+        
+        
+        <tr><th scope="row">Models and conditions</th><td colspan="1">NREL 5 MW turbines; 16 wind-direction bins at 9.8 m/s; wake and turbulence models with implicit effective wind speeds and root-sum-square wake superposition.</td></tr>
+        <tr><th scope="row">Representative source</th><td colspan="1"><a href="../../publications/joshy2023sqp/index.html">An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems</a></td></tr>
+        <tr><th scope="row">Source locator</th><td colspan="1">Section V.B, equation 25, and Figure 6, pages 12–13.</td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+<section class="bibliography" id="references" aria-label="References"><h2>References</h2><ol><li id="ref-joshy2023sqp"><span>Anugrah Jo Joshy, Ryan Dunn, Mark Sperry, Victor E. Gandarillas, John T. Hwang.</span> <a href="../../publications/joshy2023sqp/index.html">An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems</a>. <em>AIAA AVIATION 2023 Forum</em>, 2023.<div class="paper-actions"><a href="https://doi.org/10.2514/6.2023-4263">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/joshy2023sqp/joshy2023sqp--submitted-manuscript--bcda56c5dfc5.pdf">PDF</a><pre hidden>@inproceedings{joshy2023sqp,
+  author = {Anugrah Jo Joshy and Ryan Dunn and Mark Sperry and Victor E. Gandarillas and John T. Hwang},
+  title = {An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems},
+  booktitle = {AIAA AVIATION 2023 Forum},
+  year = {2023},
+  doi = {10.2514/6.2023-4263},
+  url = {https://doi.org/10.2514/6.2023-4263},
+  note = {Metadata verification: Crossref title}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for An SQP algorithm based on a hybrid architecture for accelerating optimization of large-scale systems">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li></ol></section><section class="connections" aria-label="Research connected to Wind farms"><div class="connections-heading"><p class="eyebrow">Research connections</p><h2>Related to Wind farms</h2></div><div class="link-group link-group-method"><h3>Methods</h3><ul><li><a href="../../methods/nonlinear-programming/index.html">Nonlinear programming</a></li></ul></div><div class="link-group link-group-software"><h3>Software</h3><ul><li><a href="../../software/modopt/index.html">modOpt</a></li></ul></div><div class="link-group link-group-person"><h3>Authors of related work</h3><ul><li><a href="../../people/anugrah-joshy/index.html">Anugrah Jo Joshy</a></li><li><a href="../../people/john-hwang/index.html">John T. Hwang</a></li><li><a href="../../people/mark-sperry/index.html">Mark Z. Sperry</a></li></ul></div></section></div></main><footer><div><strong>Large-Scale Design Optimization Laboratory</strong><p>Department of Mechanical and Aerospace Engineering<br>University of California San Diego</p></div><div class="footer-links"><a href="../../join/index.html">Join the lab</a><a href="../../publications/index.html">Publications</a><a href="https://github.com/LSDOlab">GitHub</a></div></footer></body></html>

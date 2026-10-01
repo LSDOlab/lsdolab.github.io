@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" data-design="ucsd-light-banner" data-alt="whitebar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Concentric-tube surgical robots · LSDO Lab</title><meta name="description" content="Concentric-tube geometry and motion co-design for patient- and population-specific surgical tools."><link rel="stylesheet" href="../../assets/site.css"><script defer src="../../assets/site.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html"><img class="brand-logo brand-logo--default" src="../../assets/brand/ucsd-mae-white.svg" alt="UC San Diego Mechanical and Aerospace Engineering"><img class="brand-logo brand-logo--ucsd-light" src="https://jacobsschool.ucsd.edu/sites/default/files/groups/jsoe/img/logos/mae/digital/UCSDLogo-JSOE-MechanicalandAerospaceEngineering-BlueGold.png" alt="UC San Diego Mechanical and Aerospace Engineering"><span class="brand-lab">LSDO Lab</span></a><nav aria-label="Main navigation"><a href="../../index.html" >Home</a><a href="../../methods/index.html" >Methods</a><a href="../index.html" aria-current="page">Applications</a><a href="../../software/index.html" >Software</a><a href="../../projects/index.html" >Funded projects</a><a href="../../publications/index.html" >Publications</a><a href="../../people/index.html" >People</a><a href="../../join/index.html" >Join</a></nav></div></header>
+<main id="main"><div class="wrap record record--research"><div class="record-heading"><a class="eyebrow" href="../index.html">Applications</a><p class="application-domain">Robotics</p><h1>Concentric-tube surgical robots</h1><p class="application-design-type">Geometry–motion co-design</p></div>
+
+<div class="prose"><p>We apply gradient-based design optimization to concentric tube robots for minimally invasive surgery. Tube geometry and deployment motions must work together to reach a surgical target within a constrained anatomy; designing them jointly also makes it possible to seek one robot design for several patients.</p>
+<h2>Sharing a design across anatomies</h2>
+<p>The framework differentiates a bending-and-torsion kinematic model and jointly optimizes tube dimensions, joint motions, and robot base frames. Simulated laryngoscopy and myocardial-biopsy examples demonstrate patient-specific designs; a three-anatomy biopsy case finds one shared tube design with separate motion plans, using 212 optimization variables and 146 constraints.</p>
+<p>Paper: <a href="../../publications/lin2022generalized/index.html">Lin et al.</a> <a aria-label="Reference 1: A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization" class="citation" href="#ref-lin2022generalized">[1]</a></p></div>
+
+<figure class="research-figure"><a href="../../assets/page-media/application/ctr/ctr-main.png" aria-label="View full-size figure: Tube lengths, curvatures, cross-sectional dimensions, translations, and rotations, alongside concentric-tube robots navigating reconstructed heart and larynx anatomies."><img src="../../assets/page-media/application/ctr/ctr-main.png" alt="Tube lengths, curvatures, cross-sectional dimensions, translations, and rotations, alongside concentric-tube robots navigating reconstructed heart and larynx anatomies." loading="eager" ></a><figcaption><span class="caption-text">Concentric-tube robot design couples tube geometry with deployment motions. The illustrated applications navigate reconstructed anatomies for myocardial biopsy and laryngoscopy. <a aria-label="Reference 1: A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization" class="citation" href="#ref-lin2022generalized">[1]</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/ctr/ctr-framework.png" aria-label="View full-size figure: Framework progressing from surgical and anatomical inputs through path, sequential, and simultaneous optimization, with an additional shared-design step for multiple patients."><img src="../../assets/page-media/application/ctr/ctr-framework.png" alt="Framework progressing from surgical and anatomical inputs through path, sequential, and simultaneous optimization, with an additional shared-design step for multiple patients." loading="lazy" ></a><figcaption><span class="caption-text">Path optimization and sequential robot optimization initialize a simultaneous design-and-motion problem. A final optimization can share one tube design across multiple patient anatomies while retaining separate deployment motions and base frames. <a aria-label="Reference 1: A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization" class="citation" href="#ref-lin2022generalized">[1]</a></span></figcaption></figure>
+
+
+<section class="problem-section" aria-labelledby="problem-title">
+  <h2 id="problem-title">Optimization problem</h2>
+  <div class="problem-matrix-wrap" tabindex="0" aria-label="Scrollable optimization formulation table">
+    
+    
+    <table class="problem-formulation-table">
+      <caption>Optimization formulation</caption>
+      <thead>
+        <tr>
+          <th scope="col">Formulation element</th>
+          <th scope="col">Path</th><th scope="col">Sequential</th><th scope="col">Simultaneous</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Case</th><td colspan="3">Concentric-tube robot design and motion planning; Table II's three optimization stages, evaluated with 25 B-spline control points (c), 3 tubes (n), 10 waypoints (b), and 1 patient (h). The tip-orientation constraint applies to myocardial biopsy.</td></tr>
+        <tr><th scope="row">Objective</th><td>Minimize f1 (Eq. 12), balancing anatomical clearance and even spacing along the path.</td><td>Minimize f (Eq. 15) for each waypoint in sequence to initialize the simultaneous problem.</td><td>Minimize f (Eq. 15), summing the objective terms across all waypoints with one shared tube design.</td></tr>
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="4">Design variables</th></tr>
+        
+        <tr>
+          <th scope="row">B-spline path control-point coordinates, cp</th>
+          <td class="problem-count">75</td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Inner diameter, IDi (0–3.5 mm; innermost diameter fixed)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">2</td><td class="problem-count">2</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Outer diameter, ODi (0–3.5 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">3</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Curved-section length, Lci (≥ 0 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">3</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Straight-section length, Lsi (≥ 0 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">3</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tube curvature, κi (≥ 0 mm⁻¹)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">3</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tube rotation at tip, φi (rad; no stated bounds)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">30</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tube translation, βi (≤ 0 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">30</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Robot base frame, B (3-D position and orientation)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">6</td><td class="problem-count">6</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total design variables</th><td class="problem-count">75</td><td class="problem-count">26</td><td class="problem-count">80</td></tr>
+        
+        <tr class="problem-matrix-note"><th scope="row">Design-variable count note</th><td>c × 3 coordinates, with c = 25.</td><td>One waypoint at a time; n − 1 inner diameters, n in each other tube-variable group, and 6 base-frame variables.</td><td>Rotations and translations each have b × n × h variables; base frames have 6 × h. Tube geometry is shared. Here b = 10, n = 3, and h = 1.</td></tr>
+        
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="4">Constraints</th></tr>
+        
+        <tr>
+          <th scope="row">Start-point coordinates, sp</th>
+          <td class="problem-count">3</td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Final-point coordinates, fp</th>
+          <td class="problem-count">3</td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count"><span aria-label="Not included in this formulation">—</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tube clearance, IDi − OD(i−1) (0.1–0.16 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">2</td><td class="problem-count">2</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tube wall thickness, (ODi − IDi)/2 (≥ 0.05 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">3</td><td class="problem-count">3</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Distal exposed length, (Li + βi) − (L(i−1) + β(i−1)) (≥ 0 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">2</td><td class="problem-count">20</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Proximal exposed length, βi − β(i+1) (≤ 0 mm)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">2</td><td class="problem-count">20</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Nitinol material strain, εi (0–0.08)</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">6</td><td class="problem-count">6</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Biopsy tip orientation, tw × tr = 0</th>
+          <td class="problem-count"><span aria-label="Not included in this formulation">—</span></td><td class="problem-count">1</td><td class="problem-count">1</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total constraints</th><td class="problem-count">6</td><td class="problem-count">16</td><td class="problem-count">52</td></tr>
+        
+        <tr class="problem-matrix-note"><th scope="row">Constraint count note</th><td><span aria-label="No count note for this formulation">—</span></td><td>Table II counts 2 material-strain checks per tube and 1 tip-orientation constraint; objective penalties are not counted as explicit constraints.</td><td>Each exposed-length group has b × (n − 1) × h constraints; strain has n × h × 2 and tip orientation has h, following Table II's counting convention.</td></tr>
+        
+        
+        <tr><th scope="row">Models and conditions</th><td colspan="3">Coupled tube bending and torsion with backbone reconstruction; 50-link discretization, nitinol (E = 80 GPa, strain limit 0.08), and no friction or external loading. The original OpenMDAO-based Ozone implementation integrates the kinematics with Lobatto2; OpenMDAO computes derivatives for SNOPT. For the myocardial-biopsy example, the innermost diameter is fixed at 0.6 mm and is excluded from the design-variable count. Unspecified bounds in Table II remain unspecified here; variable bounds are not added to constraint totals.</td></tr>
+        <tr><th scope="row">Representative source</th><td colspan="3"><a href="../../publications/lin2022generalized/index.html">A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization</a></td></tr>
+        <tr><th scope="row">Source locator</th><td colspan="3">Table II, printed page 3784 (PDF page 11); objective definitions in Eqs. (12)–(15), pages 3781–3782; myocardial-biopsy conditions in Section V-B, page 3786.</td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+<section class="bibliography" id="references" aria-label="References"><h2>References</h2><ol><li id="ref-lin2022generalized"><span>Jui-Te Lin, Cedric Girerd, Jiayao Yan, John T. Hwang, Tania K. Morimoto.</span> <a href="../../publications/lin2022generalized/index.html">A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization</a>. <em>IEEE Transactions on Robotics</em>, 2022.<div class="paper-actions"><a href="https://doi.org/10.1109/tro.2022.3180627">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/lin2022generalized/lin2022generalized--submitted-manuscript--9064e0fc364c.pdf">PDF</a><pre hidden>@article{lin2022generalized,
+  author = {Jui-Te Lin and Cedric Girerd and Jiayao Yan and John T. Hwang and Tania K. Morimoto},
+  title = {A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization},
+  journal = {IEEE Transactions on Robotics},
+  year = {2022},
+  volume = {38},
+  number = {6},
+  pages = {3774-3791},
+  doi = {10.1109/tro.2022.3180627},
+  url = {https://doi.org/10.1109/tro.2022.3180627},
+  note = {Metadata verification: Crossref DOI}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for A Generalized Framework for Concentric Tube Robot Design Using Gradient-Based Optimization">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li></ol></section><section class="connections" aria-label="Research connected to Concentric-tube surgical robots"><div class="connections-heading"><p class="eyebrow">Research connections</p><h2>Related to Concentric-tube surgical robots</h2></div><div class="link-group link-group-software"><h3>Software</h3><ul><li><a href="../../software/ozone/index.html">Ozone</a></li></ul></div><div class="link-group link-group-person"><h3>Authors of related work</h3><ul><li><a href="../../people/john-hwang/index.html">John T. Hwang</a></li></ul></div></section></div></main><footer><div><strong>Large-Scale Design Optimization Laboratory</strong><p>Department of Mechanical and Aerospace Engineering<br>University of California San Diego</p></div><div class="footer-links"><a href="../../join/index.html">Join the lab</a><a href="../../publications/index.html">Publications</a><a href="https://github.com/LSDOlab">GitHub</a></div></footer></body></html>

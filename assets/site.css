@@ -1,0 +1,443 @@
+:root{color-scheme:dark;--bg:#202327;--deep:#191c20;--panel:#2a2e33;--text:#edf0f2;--muted:#b5bcc4;--accent:#a5c6de;--gold:#a5c6de;--line:#ffffff20;--figure:#fff;--max:1200px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);line-height:1.6}a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:.06em}a:hover{color:var(--accent)}button,input,select{font:inherit}button,a,input,select{touch-action:manipulation}:focus-visible{outline:3px solid var(--accent);outline-offset:5px}button{cursor:pointer}[hidden]{display:none!important}.wrap{width:min(calc(100% - 64px),var(--max));margin-inline:auto}.site-header{border-bottom:1px solid var(--line)}.header-inner{max-width:1440px;margin:auto;padding:22px 32px;display:flex;align-items:center;gap:32px}.brand{text-decoration:none;font-size:24px;font-weight:750;line-height:1.05;letter-spacing:-.04em;white-space:nowrap}.brand span{font-size:11px;letter-spacing:.1em;font-weight:500}.brand small{display:block;font-size:9px;letter-spacing:.18em;color:var(--accent);margin-top:8px}.site-header nav{display:flex;flex:1;justify-content:flex-end;gap:24px;align-items:center}.site-header nav a{font-size:14px;text-decoration:none;color:var(--muted);padding:8px 0;border-bottom:2px solid transparent}.site-header nav a[aria-current]{color:var(--text);border-color:var(--gold)}.theme{border:1px solid var(--line);border-radius:50%;background:none;color:var(--text);width:34px;height:34px;flex-shrink:0}.skip{position:fixed;left:12px;top:-100px;background:var(--text);color:var(--bg);padding:10px;z-index:10}.skip:focus{top:8px}.eyebrow{font-size:11px;line-height:1.5;font-weight:650;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);text-decoration:none}h1,h2,h3{line-height:1.13;font-weight:550;letter-spacing:-.03em}h1{font-size:clamp(38px,5.1vw,68px);margin:15px 0 24px;max-width:20ch}h2{font-size:30px}h3{font-size:25px}.lead{font-size:clamp(19px,1.8vw,23px);line-height:1.5;max-width:830px;color:var(--muted)}.home-hero{padding-block:85px 78px}.home-hero h1{max-width:1050px;font-size:clamp(42px,5.5vw,76px)}.home-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:75px;align-items:start;margin-top:38px}.home-intro .lead,.home-intro .prose p{margin:0}.home-intro .prose{font-size:17px;border-left:1px solid var(--line);padding-left:32px}.showcase{padding:52px 0 58px;background:var(--deep)}.section-title{display:flex;align-items:baseline;justify-content:space-between;gap:24px;margin-bottom:28px}.section-title h2{margin:0;font-size:32px}.section-title>a{font-size:14px;color:var(--muted)}.tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);overflow-x:auto;margin-bottom:30px}.tabs button{border:0;border-bottom:2px solid transparent;padding:10px 0 14px;background:none;color:var(--muted);font-size:14px;white-space:nowrap}.tabs button[aria-selected=true]{color:var(--text);border-color:var(--gold)}.showcase-grid{display:grid;grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:44px;align-items:center}.showcase-grid h3{font-size:32px}.showcase-grid p{color:var(--muted)}.showcase-grid .research-figure{margin:0}.showcase-grid .research-figure img{height:350px;object-fit:contain}.showcase-grid figcaption{font-size:11px}.text-link{display:inline-block;font-size:14px;margin-top:10px}.home-methods{padding-block:66px}.method-row{display:grid;grid-template-columns:45px minmax(0,1fr) minmax(0,1.3fr);gap:32px;border-top:1px solid var(--line);padding:24px 0;align-items:baseline}.method-row>span{font-size:12px;color:var(--accent)}.method-row h3{font-size:21px;margin:0}.method-row h3 a{text-decoration:none}.method-row p{margin:0;color:var(--muted);font-size:15px}.software-band{background:var(--deep);padding:50px 0}.software-names{display:flex;flex-wrap:wrap;gap:22px 40px}.software-names a{font-size:25px;letter-spacing:-.03em;text-decoration:none}.record,.index-page{padding-block:60px 90px}.record-heading{margin-bottom:40px}.record-heading .lead{max-width:880px}.record-heading h1{max-width:75%}.status{font-size:12px;color:var(--gold)}.actions,.paper-actions{display:flex;gap:12px;flex-wrap:wrap}.actions a{padding:9px 16px;border:1px solid var(--line);border-radius:3px;text-decoration:none;font-size:14px}.actions a:hover{background:var(--panel)}.prose{max-width:850px;color:var(--muted);font-size:18px;line-height:1.75}.prose h2{color:var(--text);font-size:25px;margin-top:32px}.prose p{margin:0 0 20px}.prose strong{color:var(--text)}.research-figure{margin:34px 0 46px}.research-figure>a{display:block;background:var(--figure);border-radius:3px;overflow:hidden}.research-figure img{display:block;width:100%;height:auto;max-height:730px;object-fit:contain;margin:auto;background:#fff;padding:12px}.research-figure figcaption{font-size:13px;line-height:1.55;color:var(--muted);margin-top:12px;max-width:1000px}.research-figure figcaption a{color:var(--accent)}.connections{border-top:1px solid var(--line);margin-top:56px;padding-top:35px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}.link-group h2{font-size:16px;color:var(--accent);margin:0 0 18px}.link-group ul{list-style:none;margin:0;padding:0}.link-group li{font-size:14px;line-height:1.55;margin-bottom:12px}.link-group span{display:block;font-size:12px;color:var(--muted);margin-top:3px}.link-group:has(li:nth-child(6)){grid-column:span 2}.card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.card{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:var(--deep)}.card-visual{height:245px;display:flex;align-items:center;justify-content:center;background:#fff}.card-visual img{width:100%;height:100%;object-fit:contain;padding:14px}.card-copy{padding:25px 28px 28px}.card h2{font-size:26px;margin:0 0 12px}.card h2 a{text-decoration:none}.card p{font-size:15px;color:var(--muted);margin:0}.people-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.person-card{padding:26px;background:var(--deep);border-top:1px solid var(--line)}.person-card h2{font-size:22px}.person-card p{font-size:14px;color:var(--muted)}.monogram{display:flex;align-items:center;justify-content:center;width:90px;height:90px;background:var(--panel);color:var(--accent);font-size:26px;border-radius:50%;letter-spacing:-.04em}.person-content{display:flex;gap:40px;align-items:start}.person-content .monogram{flex-shrink:0;width:125px;height:125px;font-size:36px}.filters{display:flex;align-items:end;flex-wrap:wrap;gap:20px;padding:24px;background:var(--deep);border:1px solid var(--line);margin-bottom:25px}.filters label{font-size:12px;color:var(--muted);display:flex;flex-direction:column;gap:6px}.filters label:first-child{flex:1;min-width:240px}input,select{color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:3px;padding:10px;font-size:14px;max-width:100%}.filters #paper-count{width:100%;margin:0;font-size:12px;color:var(--muted)}.publication{display:grid;grid-template-columns:60px minmax(0,1fr);gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}.pub-year{color:var(--accent);font-size:13px;padding-top:4px}.publication h2{font-size:21px;margin:0 0 12px}.publication h2 a{text-decoration:none}.publication p{font-size:14px;line-height:1.5;margin:5px 0;color:var(--muted)}.venue{font-style:italic}.paper-actions{margin-top:12px;font-size:12px}.authors{color:var(--text)}details{margin-top:28px;font-size:14px}summary{cursor:pointer}pre{white-space:pre-wrap;word-break:break-word;background:var(--deep);padding:22px;font-size:12px;line-height:1.65}.copy-bib{color:var(--text);background:var(--panel);border:1px solid var(--line);padding:8px 12px}.copy-status{padding-left:12px;font-size:12px}footer{border-top:1px solid var(--line);padding:42px max(32px,calc((100% - 1200px)/2));display:flex;justify-content:space-between;gap:40px;font-size:13px}footer p{color:var(--muted);margin-bottom:0}.footer-links{display:flex;flex-wrap:wrap;gap:15px;justify-content:flex-end;max-width:330px}.footer-links small{width:100%;text-align:right;color:var(--muted);font-size:11px}@media(min-width:1600px){:root{--max:1280px}}@media(max-width:1050px){.header-inner{gap:20px;flex-wrap:wrap}.site-header nav{order:3;width:100%;justify-content:space-between;gap:14px;overflow:auto}.theme{margin-left:auto}.home-intro{gap:35px}.showcase-grid{grid-template-columns:1.8fr 1fr;gap:26px}.showcase-grid h3{font-size:26px}.connections{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.wrap{width:calc(100% - 36px)}.header-inner{padding:18px;gap:15px}.brand{font-size:22px}.site-header nav{gap:20px;justify-content:flex-start}.site-header nav a{font-size:13px}.home-hero{padding-block:42px}.home-hero h1{font-size:39px;line-height:1.1}.home-intro{grid-template-columns:1fr;gap:22px}.home-intro .prose{border:0;padding:0;font-size:16px}.lead{font-size:19px}.section-title{align-items:start}.section-title h2{font-size:26px}.section-title>a{font-size:12px;max-width:110px;text-align:right}.showcase{padding:32px 0}.tabs{gap:22px}.showcase-grid{grid-template-columns:1fr;gap:10px}.showcase-grid .research-figure img{height:245px}.showcase-grid h3{font-size:26px;margin:12px 0}.showcase-grid .eyebrow{display:none}.home-methods{padding-block:40px}.method-row{grid-template-columns:25px 1fr;gap:12px;padding:20px 0}.method-row p{grid-column:2}.method-row h3{font-size:20px}.software-names{gap:16px 24px}.software-names a{font-size:22px}.record,.index-page{padding-block:38px 50px}.record-heading h1{font-size:36px}.record-heading{margin-bottom:28px}.prose{font-size:16px}.research-figure img{padding:6px}.research-figure figcaption{font-size:12px}.card-grid,.people-grid,.connections{grid-template-columns:1fr}.link-group:has(li:nth-child(6)){grid-column:auto}.card-visual{height:220px}.card-copy{padding:22px}.card h2{font-size:23px}.connections{margin-top:34px;gap:20px}.person-content{flex-direction:column;gap:24px}.publication{grid-template-columns:40px 1fr;gap:12px}.publication h2{font-size:18px}.filters{padding:16px;gap:14px}.filters label{flex:1}.filters label:first-child{min-width:100%}footer{padding:30px 18px;flex-direction:column;gap:20px}.footer-links{justify-content:flex-start}.footer-links small{text-align:left}h1,h2,h3,p,a{overflow-wrap:break-word}}@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}@media print{.site-header,.theme,.filters,footer{display:none}body{background:white;color:#111}.wrap{width:100%}.prose,.lead,figcaption{color:#333}.research-figure{break-inside:avoid}}
+
+.research-figure video{display:block;width:100%;max-height:730px;background:#fff}.light .card{background:#fff}.light .card-visual{border-bottom:1px solid var(--line)}
+
+/* Alternating home sections retain a white surface for scientific media. */
+.colored-band{background:var(--bg);color:var(--text)}
+.light .showcase,.light .software-band{background:#fff}
+.connections{width:100%;background:var(--deep);padding:30px;grid-template-columns:repeat(2,minmax(0,1fr));border:1px solid var(--line);border-radius:4px}
+.connections-heading{grid-column:1/-1}.connections-heading .eyebrow{margin:0 0 10px}.connections-heading h2{font-size:26px;margin:0}
+.link-group{padding-top:20px;border-top:1px solid var(--line)}.link-group h3{font-size:17px;color:var(--accent);margin:0 0 18px}.link-group li{font-size:15px}.link-group:has(li:nth-child(6)){grid-column:auto}.link-group-paper{grid-column:1/-1!important}.link-group-paper ul{columns:2;column-gap:36px}.link-group li{break-inside:avoid}
+.portrait{aspect-ratio:4/5;width:100%;max-width:280px;background:var(--panel);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden}.portrait img{width:100%;height:100%;object-fit:cover}.portrait .monogram{background:var(--deep)}.person-content>.portrait{width:230px;flex-shrink:0}.person-card .portrait{max-width:none}
+.people-section{margin-top:52px}.people-section:first-of-type{margin-top:0}.people-section>h2{font-size:28px;margin:0 0 22px;padding-bottom:12px;border-bottom:1px solid var(--line)}.people-section .person-card h3{font-size:22px;margin:18px 0 8px}.people-section .person-card h3 a{text-decoration:none}.people-section:not(.people-section--alumni) .person-card .portrait{width:50%;max-width:140px}.people-section--alumni .person-card{padding:20px 0;background:transparent;border:0;border-top:1px solid var(--line)}.people-section--alumni .person-card h3{margin:0 0 6px}
+.problem-section{margin:36px 0}.problem-section h2{font-size:25px}.problem-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.6}.problem-table th,.problem-table td{border:1px solid var(--line);padding:14px 18px;text-align:left;vertical-align:top}.problem-table th{width:23%;background:var(--deep);font-weight:550}.problem-source{font-size:13px;color:var(--muted)}
+@media(max-width:650px){.connections{padding:20px;grid-template-columns:1fr}.link-group-paper ul{columns:1}.problem-table th,.problem-table td{padding:10px}.person-content>.portrait{width:200px}}
+
+/* Charcoal palette with a restrained cool-blue accent. */
+:root{--blue:#a5c6de;--yellow:#a5c6de}
+.site-header{border-bottom:1px solid var(--line)}.site-header nav a[aria-current]{border-color:var(--yellow)}
+.showcase,.software-band{border-block:1px solid var(--line)}.card,.connections,.person-card{border-color:var(--line)}
+.media-watch{margin:16px 0 0}.youtube-link{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--accent);padding:10px 15px;border:1px solid var(--line);border-radius:3px;font-size:14px;font-weight:500;text-decoration:none;line-height:1.4}.youtube-link .play{color:var(--yellow);font-size:13px}.youtube-link:hover{background:var(--panel);border-color:var(--accent);color:var(--text)}.youtube-link:hover .play{color:var(--accent)}
+.card .media-watch{margin-top:20px}.showcase-grid .media-watch{font-size:14px}.research-figure>.media-watch{background:transparent;overflow:visible}
+
+/* Compact video action shares the caption row and wraps only when needed. */
+.research-figure figcaption{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 18px;max-width:none}
+.caption-text{flex:1 1 280px}.research-figure figcaption .media-watch{flex:0 0 auto;margin:0}
+.youtube-link{padding:4px 8px;gap:6px;font-size:11px;line-height:1.5;white-space:nowrap}
+.research-figure figcaption .youtube-link{color:var(--accent)}.research-figure figcaption .youtube-link:hover{color:var(--text)}.youtube-link .play{font-size:10px}
+.card .media-watch{display:inline-block;margin-top:12px}
+
+/* Prototype-only comparison controls; every version uses the same Markdown. */
+.design-preview{position:sticky;top:0;z-index:30;background:#111418;color:#edf0f2;border-bottom:1px solid #ffffff30;font-size:12px}.design-preview-inner{max-width:1440px;margin:auto;padding:10px 32px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}.preview-label{font-weight:600}.design-options,.design-step{display:flex;gap:5px}.design-options{flex-wrap:wrap}.design-preview button{border:1px solid #ffffff30;border-radius:3px;color:#b5bcc4;background:transparent;padding:6px 10px;font-size:12px}.design-preview button[aria-pressed=true]{background:#edf0f2;color:#202327;border-color:#edf0f2}.design-preview button:hover{border-color:#a5c6de}.design-description{color:#b5bcc4;font-size:11px}.design-step button{min-width:30px}.design-preview:focus-within{outline-offset:-3px}
+:root[data-design=editorial]{--bg:#182B49;--deep:#182B49;--panel:#182B49;--text:#FFFFFF;--muted:#F5F0E6;--accent:#FFCD00;--gold:#C69214;--blue:#00629B;--yellow:#FFCD00;--line:#FFFFFF33}
+:root[data-design=editorial] main h1,:root[data-design=editorial] main h2,:root[data-design=editorial] main h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;letter-spacing:-.035em}
+:root[data-design=editorial] .card-grid{grid-template-columns:1fr;gap:0}:root[data-design=editorial] .card{display:grid;grid-template-columns:minmax(230px,30%) 1fr;align-items:center;padding:28px 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent}:root[data-design=editorial] .card-visual{height:205px}:root[data-design=editorial] .card-copy{padding:12px 0 12px 38px}:root[data-design=editorial] .card h2{font-size:32px}:root[data-design=editorial] .card p{max-width:65ch;font-size:16px}:root[data-design=editorial] .home-hero{padding-block:65px}:root[data-design=editorial] .connections{background:transparent;border-inline:0;border-radius:0;padding-inline:0}:root[data-design=editorial] .person-card{background:transparent}
+:root[data-design=gallery]{--bg:#151515;--deep:#101010;--panel:#252525;--text:#f1f0ec;--muted:#b9b8b3;--accent:#d3d9db;--gold:#d3d9db;--blue:#d3d9db;--yellow:#d3d9db;--line:#ffffff24;--max:1320px}
+:root[data-design=gallery] h1,:root[data-design=gallery] h2,:root[data-design=gallery] h3{font-weight:450;letter-spacing:-.045em}:root[data-design=gallery] .eyebrow{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}:root[data-design=gallery] .card-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}:root[data-design=gallery] .card{border:0;border-radius:0;background:transparent}:root[data-design=gallery] .card-visual{height:230px}:root[data-design=gallery] .card-copy{padding:20px 0 30px}:root[data-design=gallery] .card h2{font-size:24px}:root[data-design=gallery] .card p{font-size:14px}:root[data-design=gallery] .home-intro{grid-template-columns:1fr 1fr;gap:45px}:root[data-design=gallery] .showcase-grid{grid-template-columns:2.5fr 1fr}:root[data-design=gallery] .home-hero{padding-block:60px}:root[data-design=gallery] .person-card{padding:0;background:transparent;border:0}:root[data-design=gallery] .connections{border-radius:0;background:transparent}
+@media(max-width:1050px){:root[data-design=gallery] .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.design-description{display:none}}
+@media(max-width:650px){.design-preview-inner{padding:8px 18px;gap:8px}.preview-label{display:none}.design-options{flex:1}.design-preview button{font-size:10px;padding:6px}.design-step{gap:3px}:root[data-design=editorial] .card{grid-template-columns:1fr;padding-block:22px}:root[data-design=editorial] .card-copy{padding:20px 0 0}:root[data-design=editorial] .card h2{font-size:27px}:root[data-design=gallery] .card-grid,:root[data-design=gallery] .home-intro,:root[data-design=gallery] .showcase-grid{grid-template-columns:1fr}}
+@media print{.design-preview{display:none}}
+
+/* Selected navy direction: sans-serif cards and unified media panels. */
+:root[data-design=editorial]{font-family:'Helvetica Neue',Arial,sans-serif}
+:root[data-design=editorial] main h1,:root[data-design=editorial] main h2,:root[data-design=editorial] main h3{font-family:inherit;font-weight:550;letter-spacing:-.03em}
+:root[data-design=editorial] .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+:root[data-design=editorial] .card{display:block;padding:0;border:1px solid var(--line);border-radius:5px;background:var(--panel)}
+:root[data-design=editorial] .card-visual{height:245px}:root[data-design=editorial] .card-visual video{display:block;width:100%;height:100%;object-fit:contain;padding:16px;background:#fff}:root[data-design=editorial] .card-copy{padding:25px 28px 28px}:root[data-design=editorial] .card h2{font-size:26px}:root[data-design=editorial] .card p{font-size:15px}
+@media(min-width:2000px){:root[data-design=editorial] .index-page{width:min(calc(100% - 128px),1840px)}:root[data-design=editorial] .index-page .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.card{background:var(--panel)}.card-visual{margin:16px 16px 0;border-radius:3px}.card-visual img,.card-visual video{width:100%;height:100%;object-fit:contain;padding:16px;background:#fff}.card-visual video{display:block}
+.showcase-grid{padding:22px;border:1px solid var(--line);border-radius:5px;background:var(--panel);gap:30px}.showcase-grid>div{min-width:0}.showcase-grid .research-figure{border:0;padding:0;background:transparent}
+.research-figure{border:1px solid var(--line);border-radius:5px;background:var(--panel);padding:18px}.research-figure>a{border-radius:3px}.research-figure figcaption{padding-top:2px}
+.bibliography{margin:45px 0 0;padding-top:30px;border-top:1px solid var(--line)}.bibliography h2{font-size:25px}.bibliography ol{padding-left:28px}.bibliography li{padding-left:6px;margin:0 0 18px;color:var(--muted);font-size:14px;line-height:1.65;scroll-margin-top:100px}.bibliography li a{color:var(--text)}.citation{color:var(--accent);white-space:nowrap;font-size:.85em;vertical-align:super;text-decoration:none}
+@media(max-width:650px){:root[data-design=editorial] .card-grid{grid-template-columns:1fr}:root[data-design=editorial] .card-copy{padding:22px}:root[data-design=editorial] .card-visual{height:220px}.showcase-grid,.research-figure{padding:12px}.showcase-grid .research-figure{padding:0}}
+
+/* Campus photography is local, content-bearing media; it complements only primary route headings. */
+.campus-banner{position:absolute;inset:0;overflow:hidden;z-index:0;background:var(--deep)}.campus-banner img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}.campus-banner>span{position:absolute;inset:0;background:linear-gradient(105deg,rgb(24 43 73 / .94) 0%,rgb(24 43 73 / .84) 46%,rgb(0 98 155 / .58) 100%)}.home-hero--campus{position:relative;isolation:isolate;overflow:hidden}.home-hero--campus>.wrap{position:relative;z-index:1}.home-hero--campus .campus-banner{z-index:0}.home-hero--campus .home-intro .prose{border-color:#FFFFFF55}.campus-heading{position:relative;isolation:isolate;min-height:270px;overflow:hidden;padding:48px 52px;margin-inline:-20px;border:1px solid var(--line);border-radius:5px;background:var(--deep);display:flex;flex-direction:column;justify-content:center}.campus-heading>*:not(.campus-banner){position:relative;z-index:2}.campus-heading .campus-banner{z-index:0}.campus-heading .lead{color:#F5F0E6;margin-bottom:0}.campus-heading .eyebrow{color:#FFCD00}.campus-heading h1{margin-top:12px;margin-bottom:16px}.campus-heading .campus-banner img{object-position:center 46%}.campus-heading:has(.campus-banner) + .prose{margin-top:0}@media(max-width:650px){.home-hero--campus .campus-banner img{object-position:60% center}.campus-heading{min-height:250px;padding:34px 24px;margin-inline:0}.campus-heading h1{font-size:36px}.campus-heading .campus-banner img{object-position:center}.campus-banner>span{background:linear-gradient(105deg,rgb(24 43 73 / .94),rgb(24 43 73 / .7))}}
+
+/* Hold the home aerial crop high enough that the coastline remains in the banner. */
+.home-hero--campus .campus-banner img{object-position:center 12%}
+@media(max-width:650px){.home-hero--campus .campus-banner img{object-position:center 12%}}
+
+/* Put the FAH facade—not its roofline—at the visual center of the Methods banner. */
+@media(min-width:651px){.campus-heading:has(img[src$="campus-methods-fah-aerial.jpg"]){min-height:310px}}
+.campus-heading:has(img[src$="campus-methods-fah-aerial.jpg"]) .campus-banner img{object-position:center 65%}
+
+/* Official UC San Diego MAE mark stays unmodified; the lab wordmark remains readable beside it. */
+.brand{display:flex;align-items:center;gap:clamp(10px,1.1vw,18px);flex:0 1 auto;min-width:0;color:var(--text);font-size:0;line-height:1;letter-spacing:normal;white-space:nowrap}.brand .brand-logo{display:block;width:clamp(150px,14vw,210px);height:auto;flex:none}.brand-logo--ucsd-light{display:none}.brand .brand-lab{display:block;font-size:clamp(19px,1.75vw,26px);font-weight:650;letter-spacing:-.035em;line-height:1.05}
+.header-inner{gap:clamp(20px,2.25vw,32px)}.site-header nav{gap:clamp(12px,1.67vw,24px)}
+@media(max-width:1280px){.header-inner{flex-wrap:wrap}.site-header nav{order:3;width:100%;justify-content:space-between;gap:14px;overflow:auto}}
+@media(max-width:1050px){.brand{flex-basis:auto}}
+@media(max-width:650px){.brand{gap:8px;white-space:normal}.brand .brand-logo{width:clamp(112px,31vw,145px)}.brand .brand-lab{font-size:clamp(17px,5.2vw,22px);line-height:1.05}}
+
+/* Keep the masthead and every primary content grid on the same left edge. */
+.header-inner{width:min(calc(100% - 64px),var(--max));max-width:none;margin-inline:auto;padding:22px 0}.campus-heading{margin-inline:0}
+@media(min-width:2000px){.site-header:has(+ main .index-page) .header-inner,.site-header:has(+ main .home-hero) .header-inner{width:min(calc(100% - 128px),1840px)}.home-hero>.wrap,.showcase>.wrap,.home-methods>.wrap,.software-band>.wrap{width:min(calc(100% - 128px),1840px)}}
+@media(max-width:650px){.header-inner{width:calc(100% - 36px);padding:18px 0}}
+
+/* On very wide displays, research records share the primary page frame while
+   keeping narrative prose readable and giving scientific media room to breathe. */
+@media(min-width:2000px){
+  :root[data-design=editorial] .record--research{width:min(calc(100% - 128px),1840px)}
+  :root[data-design=editorial] .site-header:has(+ main .record--research) .header-inner{width:min(calc(100% - 128px),1840px)}
+  :root[data-design=editorial] .record--research .prose{max-width:1160px}
+  :root[data-design=editorial] .record--research .research-figure,:root[data-design=editorial] .record--research .problem-section{max-width:1360px}
+}
+
+/* Research narratives use the page frame without expanding into an uncomfortable line length. */
+@media(min-width:851px){
+  :root[data-design=editorial] .record--research .prose,:root[data-design=editorial] .record--research .bibliography{max-width:1160px}
+  :root[data-design=editorial] .record--research .record-heading .lead{max-width:1100px}
+  .connections{grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;padding:24px}
+  .link-group{padding-top:16px}.link-group h3{font-size:15px;margin-bottom:12px}.link-group li{font-size:13px;line-height:1.45;margin-bottom:8px}
+}
+
+/* Citation controls are compact, ordered, and usable wherever a paper is named. */
+.paper-actions{align-items:center;gap:8px;margin-top:12px}.paper-actions a,.paper-actions .copy-bib{border:1px solid var(--line);border-radius:3px;padding:5px 9px;background:transparent;color:var(--text);font-size:12px;line-height:1.35;text-decoration:none}.paper-actions a:hover,.paper-actions .copy-bib:hover{background:var(--panel);border-color:var(--accent)}.paper-actions .copy-status{padding-left:2px}.bibliography .paper-actions{margin-top:8px}
+
+/* Every application exposes one complete formulation table.  Detailed sources
+   share their source groups across formulation columns; compact sources remain
+   a one-value-column version of exactly the same treatment. */
+.problem-matrix-wrap{overflow-x:auto;margin:24px 0;max-width:100%;border-radius:4px}.problem-matrix-wrap:focus-visible{outline-offset:3px}.problem-formulation-table{width:100%;min-width:880px;border-collapse:collapse;font-size:14px;line-height:1.5}.problem-formulation-table caption{text-align:left;font-size:18px;font-weight:600;margin-bottom:10px}.problem-formulation-table th,.problem-formulation-table td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}.problem-formulation-table thead th{background:var(--deep);font-weight:600}.problem-formulation-table thead th:first-child,.problem-formulation-table tbody>tr:not(.problem-matrix-section)>th{width:36%;font-weight:550}.problem-formulation-table td{min-width:170px}.problem-formulation-table--single{min-width:0}.problem-formulation-table--single td{min-width:0}.problem-formulation-table--single tbody>tr>th{width:30%}.problem-matrix-section th{background:var(--panel);color:var(--accent);font-size:12px;font-weight:650;letter-spacing:.08em;text-transform:uppercase}.problem-matrix-total th,.problem-matrix-total td{background:var(--deep);font-weight:650}.problem-matrix-note th,.problem-matrix-note td{color:var(--muted);font-size:12px}.problem-count{text-align:right!important;font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Research records use one centered desktop rail for text, tables, figures,
+   bibliography, and related work rather than leaving an unused right column. */
+@media(min-width:851px){.record--research>.record-heading,.record--research>.prose,.record--research>.problem-section,.record--research>.research-figure,.record--research>.bibliography,.record--research>.connections{width:min(100%,1360px);max-width:1360px;margin-inline:auto}:root[data-design=editorial] .record--research>.prose,:root[data-design=editorial] .record--research>.problem-section,:root[data-design=editorial] .record--research>.research-figure,:root[data-design=editorial] .record--research>.bibliography{max-width:1360px}}
+@media(max-width:650px){.problem-formulation-table{font-size:13px;min-width:720px}.problem-formulation-table th,.problem-formulation-table td{padding:8px}.problem-formulation-table--single{min-width:0}}
+
+/* The home aerial stays visible across the hero.  Its brief tagline and
+   mission share a single quiet surface, so they read as one introduction. */
+.home-hero--campus .home-intro{display:flex;flex-direction:column;align-items:stretch;gap:clamp(16px,1.7vw,24px);width:min(100%,900px);margin-top:34px;padding:clamp(22px,2.4vw,36px);border:0;border-radius:0;background:rgb(11 27 51 / .52);box-shadow:none}
+.home-hero--campus .home-intro>.lead,.home-hero--campus .home-intro>.prose{width:100%;max-width:none;margin:0;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none}
+.home-hero--campus .home-intro>.lead{color:var(--text);font-size:clamp(20px,1.55vw,25px);font-weight:450;line-height:1.32;letter-spacing:-.02em}
+.home-hero--campus .home-intro>.prose{color:#F5F0E6;font-size:clamp(15px,1.05vw,17px);line-height:1.65}
+@media(max-width:650px){.home-hero--campus .home-intro{gap:16px;width:100%;margin-top:28px;padding:22px}.home-hero--campus .home-intro>.lead{font-size:clamp(19px,5.6vw,23px);line-height:1.35}.home-hero--campus .home-intro>.prose{font-size:15px;line-height:1.6}}
+
+/* Give the home title and introduction a shared, proportional reading measure.
+   The wider Home frame remains visible around them on large displays. */
+.home-hero--campus h1,.home-hero--campus .home-intro{width:min(70%,1120px);max-width:none}
+@media(max-width:650px){.home-hero--campus h1,.home-hero--campus .home-intro{width:100%;max-width:none}}
+
+/* Keep the comparison schemes distinct over campus photography: Charcoal uses
+   neutral graphite, while Ink uses a quiet aubergine-black wash.  The matching
+   home panels retain enough opacity for text contrast without turning either
+   treatment back into navy. */
+:root[data-design=charcoal] .campus-banner>span{background:linear-gradient(105deg,rgb(17 20 23 / .96) 0%,rgb(26 30 34 / .88) 46%,rgb(54 58 63 / .72) 100%)}
+:root[data-design=charcoal] .home-hero--campus .home-intro{background:rgb(20 23 27 / .58)}
+:root[data-design=gallery] .campus-banner>span{background:linear-gradient(105deg,rgb(21 17 22 / .96) 0%,rgb(31 24 31 / .88) 46%,rgb(57 43 54 / .72) 100%)}
+:root[data-design=gallery] .home-hero--campus .home-intro{background:rgb(24 18 24 / .58)}
+
+/* Ink retains its compact three-column gallery but now gives every item a
+   complete card surface, matching the treatment available in the other two
+   schemes and keeping the media/copy pair visually intact. */
+:root[data-design=gallery] .card{border:1px solid var(--line);border-radius:5px;background:var(--panel)}
+:root[data-design=gallery] .card-copy{padding:20px 22px 26px}
+
+/* A white, UCSD-forward study. Navy carries all reading text; the official
+   bright gold remains a surface/indicator color, with darker gold only where
+   an accent is text-sized. Both light studies use the approved blue-and-gold
+   MAE mark in the white masthead. */
+:root[data-design=ucsd-light]{color-scheme:light;--bg:#F8F7F3;--deep:#EEF4F8;--panel:#F7F9FC;--text:#182B49;--muted:#40526A;--accent:#00629B;--gold:#8A5A00;--blue:#00629B;--yellow:#FFCD00;--line:#182B4930}
+:root[data-design=ucsd-light] .site-header{background:#FFFFFF;color:#182B49;border-color:#182B4930}
+:root[data-design=ucsd-light] .site-header .brand-logo--default{display:none}:root[data-design=ucsd-light] .site-header .brand-logo--ucsd-light{display:block}
+:root[data-design=ucsd-light] .site-header nav a{color:#40526A}
+:root[data-design=ucsd-light] .site-header nav a[aria-current]{color:#182B49;border-color:#8A5A00}
+:root[data-design=ucsd-light] .site-header nav a:hover{color:#00629B}
+:root[data-design=ucsd-light] footer{background:#182B49;color:#FFFFFF;border-color:#FFFFFF33}
+:root[data-design=ucsd-light] footer p,:root[data-design=ucsd-light] .footer-links small{color:#D9EAF5}
+:root[data-design=ucsd-light] footer a:hover{color:#FFCD00}
+:root[data-design=ucsd-light] .campus-banner>span{background:linear-gradient(105deg,rgb(24 43 73 / .96) 0%,rgb(24 43 73 / .88) 46%,rgb(0 98 155 / .70) 100%)}
+:root[data-design=ucsd-light] .home-hero--campus{color:#FFFFFF}
+:root[data-design=ucsd-light] .home-hero--campus .eyebrow,:root[data-design=ucsd-light] .campus-heading .eyebrow{color:#FFCD00}
+:root[data-design=ucsd-light] .home-hero--campus .home-intro{background:rgb(24 43 73 / .60)}
+:root[data-design=ucsd-light] .home-hero--campus .home-intro>.lead,:root[data-design=ucsd-light] .campus-heading h1{color:#FFFFFF}
+:root[data-design=ucsd-light] .card-visual,:root[data-design=ucsd-light] .research-figure>a{background:#FFFFFF}
+/* A second white UCSD study keeps the same card geometry but gives campus
+   photography a pale blue-and-gold wash. The wash stays light across its full
+   gradient, so navy copy—not white reverse type—remains readable over it. */
+:root[data-design=ucsd-light-banner]{color-scheme:light;--bg:#F8F7F3;--deep:#EFF6FA;--panel:#F6FAFC;--text:#182B49;--muted:#40526A;--accent:#00629B;--gold:#8A5A00;--blue:#00629B;--yellow:#FFCD00;--line:#182B4930}
+:root[data-design=ucsd-light-banner] .site-header{background:#FFFFFF;color:#182B49;border-color:#182B4930}
+:root[data-design=ucsd-light-banner] .site-header .brand-logo--default{display:none}:root[data-design=ucsd-light-banner] .site-header .brand-logo--ucsd-light{display:block}
+:root[data-design=ucsd-light-banner] .site-header nav a{color:#40526A}
+:root[data-design=ucsd-light-banner] .site-header nav a[aria-current]{color:#182B49;border-color:#8A5A00}
+:root[data-design=ucsd-light-banner] .site-header nav a:hover{color:#00629B}
+:root[data-design=ucsd-light-banner] footer{background:#182B49;color:#FFFFFF;border-color:#FFFFFF33}
+:root[data-design=ucsd-light-banner] footer p,:root[data-design=ucsd-light-banner] .footer-links small{color:#D9EAF5}
+:root[data-design=ucsd-light-banner] footer a:hover{color:#FFCD00}
+:root[data-design=ucsd-light-banner] .campus-banner>span{background:linear-gradient(105deg,rgb(250 252 253 / .84) 0%,rgb(235 245 250 / .80) 50%,rgb(255 248 220 / .76) 100%)}
+:root[data-design=ucsd-light-banner] .home-hero--campus{color:#182B49}
+:root[data-design=ucsd-light-banner] .home-hero--campus .eyebrow,:root[data-design=ucsd-light-banner] .campus-heading .eyebrow{color:#8A5A00}
+:root[data-design=ucsd-light-banner] .home-hero--campus .home-intro{background:rgb(255 255 255 / .48)}
+:root[data-design=ucsd-light-banner] .home-hero--campus .home-intro>.lead,:root[data-design=ucsd-light-banner] .campus-heading h1{color:#182B49}
+:root[data-design=ucsd-light-banner] .home-hero--campus .home-intro>.prose,:root[data-design=ucsd-light-banner] .campus-heading .lead{color:#40526A}
+
+/* The comparison choices are palette studies, not alternate layouts.  Keep one
+   canonical card/page system (the selected Navy cards system) and let each
+   scheme differ only through its color tokens and photography washes above. */
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]){--max:1200px;font-family:'Helvetica Neue',Arial,sans-serif}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) main h1,:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) main h2,:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) main h3{font-family:inherit;font-weight:550;letter-spacing:-.03em}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .eyebrow{font-family:inherit;letter-spacing:.14em}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .home-hero{padding-block:65px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .home-intro{grid-template-columns:1.2fr 1fr;gap:75px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid{grid-template-columns:minmax(0,2.1fr) minmax(0,1fr);gap:30px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card{display:block;padding:0;border:1px solid var(--line);border-radius:5px;background:var(--panel)}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual{height:245px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual video{display:block;width:100%;height:100%;object-fit:contain;padding:16px;background:#fff}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-copy{padding:25px 28px 28px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card h2{font-size:26px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card p{max-width:65ch;font-size:15px}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .person-card{padding:26px;background:transparent;border-top:1px solid var(--line)}
+:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .connections{background:transparent;border-inline:0;border-radius:0;padding-inline:0}
+
+@media(min-width:1600px){:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]){--max:1280px}}
+@media(min-width:2000px){
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .index-page{width:min(calc(100% - 128px),1840px)}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .index-page .card-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .record--research{width:min(calc(100% - 128px),1840px)}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .site-header:has(+ main .record--research) .header-inner{width:min(calc(100% - 128px),1840px)}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .record--research .research-figure,:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .record--research .problem-section{max-width:1360px}
+}
+@media(min-width:851px){
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .record--research .record-heading .lead{max-width:1100px}
+}
+@media(max-width:1050px){
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .home-intro{gap:35px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid{grid-template-columns:1.8fr 1fr;gap:26px}
+}
+@media(max-width:650px){
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .home-intro,:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid,:root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-grid{grid-template-columns:1fr}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .home-intro{gap:22px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid{gap:10px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card{grid-template-columns:1fr;padding-block:22px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-copy{padding:22px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card h2{font-size:27px}
+  :root:is([data-design=charcoal],[data-design=editorial],[data-design=gallery],[data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual{height:220px}
+}
+
+/* An opt-in, full-rail workspace for the paper-level advances within a research
+   page. The shared structure deliberately uses only palette tokens, so the
+   Charcoal, Navy, and Ink variants retain identical geometry and behavior. */
+.research-contributions{width:100%;min-width:0;margin:36px 0 44px}
+.research-contributions-header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 20px;margin:0 0 14px}
+.research-contributions-header h2{margin:0;font-size:22px;line-height:1.25}
+.research-contributions-header>a{color:var(--muted);font-size:13px;white-space:nowrap}
+/* Every label remains visible. Neither this rail nor the panels is a scroll
+   container; a contained underline also avoids pseudo-element overflow. */
+.research-contribution-tabs{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;padding:6px;border:1px solid var(--line);border-radius:5px 5px 0 0;background:var(--deep)}
+.research-contribution-tab{position:relative;display:flex;align-items:center;flex:0 1 auto;min-width:0;max-width:280px;min-height:48px;padding:12px 16px;border:0;border-radius:3px;color:var(--muted);font-size:15px;font-weight:550;line-height:1.35;text-decoration:none;white-space:normal;overflow-wrap:anywhere}
+.research-contribution-tab:hover{background:color-mix(in srgb,var(--text) 5%,transparent);color:var(--text)}
+.research-contribution-tab.is-active{background:color-mix(in srgb,var(--text) 9%,var(--panel));color:var(--text)}
+.research-contribution-tab.is-active::after{content:"";position:absolute;inset:auto 12px 0;height:3px;background:var(--accent);border-radius:2px}
+.research-contribution-tab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.research-contribution-panels{min-width:0;border:1px solid var(--line);border-top:0;border-radius:0 0 5px 5px;background:var(--panel)}
+.research-contribution-panel{min-width:0;padding:24px 26px 26px;scroll-margin-top:100px;overflow-wrap:anywhere}
+.research-contribution-panel:focus-visible{outline-offset:-4px}
+.research-contribution-panel+.research-contribution-panel{border-top:1px solid var(--line)}
+.research-tabs--ready .research-contribution-panel{border-top:0}
+.research-contribution-panel h3{margin:0 0 12px;font-size:26px;line-height:1.22}
+.record--research .research-contributions .research-contribution-panel>.prose{width:100%;max-width:none;font-size:17px;line-height:1.65}
+.research-contribution-panel>.prose p:last-child{margin-bottom:0}
+.contribution-paper{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:24px;row-gap:4px;margin:20px 0 0;padding:14px 0 18px;border-block:1px solid var(--line)}
+.contribution-paper>span{grid-column:1;display:block;color:var(--muted);font-size:10px;font-weight:650;letter-spacing:.1em;text-transform:uppercase}
+.contribution-paper-citation{grid-column:1;min-width:0;margin:0;color:var(--muted);font-size:13px;line-height:1.55}
+.contribution-paper-citation a{color:var(--text);text-decoration-color:var(--line)}
+.contribution-paper-citation a:hover{color:var(--accent)}
+.research-contribution-panel .paper-actions{grid-column:2;grid-row:1 / span 2;align-self:center;justify-content:flex-end;margin:0;max-width:100%}
+.research-contribution-panel .research-figure{min-width:0;margin:24px 0 0;padding:0;border:0;border-radius:0;background:transparent}
+.research-contribution-panel .research-figure:last-child{margin-bottom:0}
+.research-contribution-panel .research-figure:not(:last-child){position:relative;padding-bottom:24px;margin-bottom:24px}
+.research-contribution-panel .research-figure img,.research-contribution-panel .research-figure video{max-width:100%}
+.research-contribution-panel .caption-text{min-width:0}
+.research-contributions .prose{max-width:none}
+@media(min-width:851px){.record--research>.research-contributions{width:min(100%,1360px);max-width:1360px;margin-inline:auto}}
+@media(max-width:850px){.contribution-paper{grid-template-columns:minmax(0,1fr);row-gap:6px}.research-contribution-panel .paper-actions{grid-column:1;grid-row:auto;justify-content:flex-start;margin-top:3px}}
+@media(max-width:650px){.research-contributions{margin:30px 0 36px}.research-contributions-header{margin-bottom:12px}.research-contributions-header h2{font-size:21px}.research-contribution-tabs{gap:4px;padding:5px}.research-contribution-tab{flex:1 1 calc(50% - 4px);max-width:none;min-height:48px;padding:10px 12px;font-size:14px}.research-contribution-tab:only-child{flex:0 1 auto;max-width:100%}.research-contribution-panel{padding:20px 16px 22px}.research-contribution-panel h3{font-size:23px}.record--research .research-contributions .research-contribution-panel>.prose{font-size:16px}.research-contribution-panel .research-figure{margin-top:20px}}
+@media print{.research-contribution-tabs{display:none!important}.research-contribution-panel[hidden]{display:block!important}.research-contribution-panel{break-inside:avoid;border-top:1px solid #999!important}.research-contribution-panels{border:0;background:transparent}.contribution-paper{border-color:#999}}
+
+/* Applications answer three compact, complementary questions: domain, system,
+   and design task. These are intentionally structural rather than a fourth
+   summary, and inherit the same geometry in every comparison palette. */
+.card-domain,.application-domain{color:var(--accent);font-size:11px;font-weight:650;letter-spacing:.14em;line-height:1.5;text-transform:uppercase}
+.card-domain{margin:0 0 8px}.card-copy .card-design-type{margin:0;color:var(--muted);font-size:15px;line-height:1.5}.record-heading .application-domain{margin:14px 0 4px;font-size:12px}.record-heading .application-design-type{margin:-12px 0 0;color:var(--muted);font-size:clamp(17px,1.35vw,18px);line-height:1.5;max-width:880px}
+@media(max-width:650px){.record-heading .application-domain{font-size:11px}.record-heading .application-design-type{font-size:17px}}
+
+/* Light studies keep the immediate frame around scientific figures and videos
+   white. This applies to detail figures, contribution-tab figures, home
+   showcase figures, and card media wells—not the larger card/panel surfaces—
+   so captions retain the light page rhythm without altering source imagery. */
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual img,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual video,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure>a,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure>video,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid .research-figure,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-contribution-panel .research-figure{background:#FFFFFF;border-color:#FFFFFF;box-shadow:none}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure>a{border:0}
+
+/* The two light studies use the off-white canvas only as an outer field. Every
+   content-bearing card, panel, and table is decisively white, so white-backed
+   scientific media meets its surrounding surface without an in-between tint. */
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]){--deep:#FFFFFF;--panel:#FFFFFF;--figure:#FFFFFF;--line:#182B4926}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-copy,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .showcase-grid,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-contribution-tabs,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-contribution-panels,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-contribution-panel,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .connections,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .filters,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .person-card,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .portrait,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-matrix-wrap,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-formulation-table,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) pre{background:#FFFFFF}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .connections{border:1px solid var(--line);border-radius:5px;padding:24px}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .person-card{border:1px solid var(--line)}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-formulation-table thead th,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-matrix-section th,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-matrix-total th,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .problem-matrix-total td{background:#FFFFFF}
+/* Media itself has no framing line or shadow; table and panel separators remain
+   deliberately subtle against the white reading surface. */
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual img,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .card-visual video,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure>a,
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]) .research-figure>video{background:#FFFFFF;border-color:#FFFFFF;box-shadow:none}
+
+/* Method titles may use the full existing prose rail, avoiding avoidable
+   three-line wraps without widening the title beyond the page's reading width. */
+@media(min-width:851px){.record--research:has(.research-contributions) .record-heading h1{max-width:100%}}
+
+/* Method theme framing is deliberately a compact labeled reading aid, not a
+   second stack of cards. It sits directly below the long-form page title and
+   uses the existing palette tokens in every comparison theme. */
+.method-overview{width:min(100%,1100px);margin:-6px 0 24px;padding:4px 0;border-block:1px solid var(--line)}
+.method-overview dl{margin:0}
+.method-overview-item{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;padding:11px 0}
+.method-overview-item+.method-overview-item{border-top:1px solid var(--line)}
+.method-overview dt{color:var(--accent);font-size:11px;font-weight:650;letter-spacing:.14em;line-height:1.55;text-transform:uppercase}
+.method-overview dd{margin:0;color:var(--muted);font-size:16px;line-height:1.55}
+.method-overview dd a{color:inherit}
+.method-overview dd a:hover{color:var(--accent)}
+@media(max-width:650px){.method-overview{margin-top:-10px;margin-bottom:20px}.method-overview-item{grid-template-columns:84px minmax(0,1fr);gap:12px;padding:10px 0}.method-overview dd{font-size:15px;line-height:1.5}}
+@media print{.method-overview{border-color:#999}.method-overview-item+.method-overview-item{border-color:#999}.method-overview dt{color:#111}.method-overview dd{color:#333}}
+
+/* Figure units within a selected study need an explicit divider that remains
+   visible when the light themes deliberately remove ordinary media borders. */
+.research-contribution-panel .research-figure:not(:last-child)::after{content:"";position:absolute;right:0;bottom:0;left:0;height:1px;background:var(--line)}
+
+.profile-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;margin:38px 0 46px;padding:26px 0;border-block:1px solid var(--line)}.profile-facts h2{font-size:20px;margin:0 0 14px}.profile-facts ul{list-style:none;margin:0;padding:0}.profile-facts li{margin:0 0 14px;line-height:1.45}.profile-facts span{color:var(--muted);font-size:14px}
+
+.public-release{font-size:12px;line-height:1.45;color:var(--muted);font-variant-numeric:tabular-nums}.publication .public-release{margin:3px 0 0}.bibliography .public-release{font-size:inherit}
+
+/* Current-member cards use their full landscape footprint: a fixed, compact
+   portrait rail with the name and role occupying the remaining card width. */
+.people-section:not(.people-section--alumni) .person-card{display:grid;grid-template-columns:140px minmax(0,1fr);column-gap:22px;align-items:center}.people-section:not(.people-section--alumni) .person-card .portrait{grid-row:1 / span 2;width:140px;max-width:100%}.people-section:not(.people-section--alumni) .person-card h3{grid-column:2;margin:0 0 7px}.people-section:not(.people-section--alumni) .person-card p{grid-column:2;margin:0}@media(max-width:650px){.people-section:not(.people-section--alumni) .person-card{grid-template-columns:116px minmax(0,1fr);column-gap:18px}.people-section:not(.people-section--alumni) .person-card .portrait{width:116px}}
+
+/* Profile pages: research connections sit directly under the profile facts and stand out from the publication list. */
+.connections-profile .connections{margin-top:40px;padding:30px 32px;border:1px solid var(--accent);border-left-width:5px;background:var(--deep);border-radius:4px}
+.connections-profile .connections-heading h2{font-size:30px}
+.connections-profile .link-group h3{font-size:19px}
+.connections-profile .link-group li{font-size:16px}
+.connections-profile .link-group a{font-weight:600}
+
+.card-sponsor{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin:0 0 6px;font-weight:600}
+.project-partners{margin:0 0 24px;color:var(--muted)}
+
+.software-version{font-size:14px;color:var(--muted);margin:6px 0 0}
+
+.card-visual--placeholder{background:#d9dce0;border:0}
+:root:is([data-design=charcoal],[data-design=gallery]) .card-visual--placeholder{background:#3a3f45}
+:root[data-design=editorial] .card-visual--placeholder{background:#2d4468}
+@media(min-width:851px){.record--research>.project-full-title,.record--research>.project-partners{width:min(100%,1360px);max-width:1360px;margin-inline:auto}}
+
+/* ==== Design alternatives F/G/H/I. Layered on E; selected by ?alt=. ==== */
+.alt-choice{display:inline-flex;align-items:center;padding:6px 10px;border:1px solid #ffffff40;border-radius:4px;color:#fff;font-size:12px;text-decoration:none}.alt-choice[aria-current=true]{background:#FFCD00;color:#182B49;border-color:#FFCD00}
+:root[data-alt]{--bg:#FFFFFF}
+:root[data-alt] body,:root[data-alt] main,:root[data-alt] .colored-band{background:#FFFFFF}
+:root[data-alt] main{overflow-x:clip}
+:root[data-alt] .colored-band.home-methods,:root[data-alt] .software-band{background:#FFFFFF;border-top:1px solid var(--line)}
+
+/* Shared full-bleed band geometry (F and H): break out of .wrap, keep text on the wrap edge. */
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) :is(.index-page,.record){padding-top:0}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) .record-heading{position:relative;isolation:isolate;margin-inline:calc(50% - 50vw);padding:clamp(40px,5vw,72px) calc(50vw - min(50%,680px)) clamp(32px,4vw,52px);margin-bottom:clamp(28px,3vw,44px);border:0;border-radius:0;width:auto;max-width:none}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) .campus-heading{min-height:clamp(260px,26vw,380px)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) .record-heading:not(.campus-heading)::before{content:"";position:absolute;inset:0;z-index:-1}
+
+/* F · Full-bleed banners: home-style pale photo band on every page, white below. */
+:root[data-alt=bleed] .record-heading:not(.campus-heading)::before{background:linear-gradient(100deg,rgb(255 255 255 / .94) 0%,rgb(255 255 255 / .86) 55%,rgb(255 255 255 / .62) 100%),var(--alt-photo,url(media/campus-fah-dusk.jpg)) center 55%/cover}
+:root[data-alt=bleed] .record-heading:not(.campus-heading){border-bottom:1px solid var(--line)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]):has(.site-header nav a:nth-child(2)[aria-current]){--alt-photo:url(media/campus-methods-fah-aerial.jpg)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]):has(.site-header nav a:nth-child(4)[aria-current]){--alt-photo:url(media/campus-projects-sio-aerial.jpg)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]):has(.site-header nav a:nth-child(5)[aria-current]){--alt-photo:url(media/campus-people-geisel-dark.jpg)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]):has(.site-header nav a:nth-child(6)[aria-current]){--alt-photo:url(media/campus-publications-geisel.jpg)}
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]):has(.site-header nav a:nth-child(7)[aria-current]){--alt-photo:url(media/campus-projects-sio-aerial.jpg)}
+:root[data-alt=bleed] .record-heading .method-overview{background:rgb(255 255 255 / .72)}
+
+/* G · Quiet editorial: photography only on Home; interior titles are type-led on white. */
+:root[data-alt=quiet] .campus-heading .campus-banner{display:none}
+:root[data-alt=quiet] .campus-heading{min-height:0;padding:8px 0 28px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent}
+:root[data-alt=quiet] .record-heading h1{font-size:clamp(32px,3.4vw,50px);line-height:1.08;letter-spacing:-.035em}
+:root[data-alt=quiet] .record-heading::before{content:"";display:block;width:56px;height:4px;margin-bottom:18px;background:#C69214}
+:root[data-alt=quiet] .record-heading .lead{font-size:clamp(17px,1.4vw,21px)}
+:root[data-alt=quiet] .card-grid .card{border:0;border-top:1px solid var(--line);border-radius:0;box-shadow:none}
+:root[data-alt=quiet] .card-grid .card .card-copy{padding-inline:0}
+:root[data-alt=quiet] .card-grid .card h2{font-size:clamp(20px,1.6vw,24px)}
+:root[data-alt=quiet] .research-contribution-panels,:root[data-alt=quiet] .research-contribution-tabs{border-inline:0;border-radius:0}
+
+/* H · Navy masthead: navy header + navy title band (UCSD identity), white reading surface. */
+:root[data-alt=navy] .site-header{background:#182B49;border-color:#182B49}
+:root[data-alt=navy] .site-header .brand-logo--ucsd-light{display:none}:root[data-alt=navy] .site-header .brand-logo--default{display:block}
+:root[data-alt=navy] .site-header .brand-lab{color:#FFFFFF}
+:root[data-alt=navy] .site-header nav a{color:#D7E1EC}
+:root[data-alt=navy] .site-header nav a:hover{color:#FFFFFF}
+:root[data-alt=navy] .site-header nav a[aria-current]{color:#FFFFFF;border-color:#FFCD00}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading:not(.campus-heading)::before{background:linear-gradient(105deg,rgb(24 43 73 / .94) 0%,rgb(24 43 73 / .86) 50%,rgb(24 43 73 / .68) 100%),var(--alt-photo,url(media/campus-fah-dusk.jpg)) center 55%/cover}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading{border-top:1px solid #ffffff1f}
+:root:is([data-alt=navy],[data-alt=whitebar]) .campus-banner>span{background:linear-gradient(105deg,rgb(24 43 73 / .94) 0%,rgb(24 43 73 / .82) 50%,rgb(24 43 73 / .45) 100%)}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading :is(h1,.lead,.application-design-type,.software-version,.project-partners,dd,.authors){color:#FFFFFF}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading .lead,:root[data-alt=navy] .record-heading dd{color:#DCE5EF}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading :is(.eyebrow,dt,.application-domain){color:#FFCD00}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading a:not(.eyebrow){color:#FFFFFF}
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading .method-overview,:root[data-alt=navy] .record-heading .method-overview-item+.method-overview-item{border-color:#ffffff33}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus{color:#FFFFFF}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus .campus-banner>span{background:linear-gradient(105deg,rgb(24 43 73 / .92),rgb(24 43 73 / .5))}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus h1,:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus .home-intro>.lead{color:#FFFFFF}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus .eyebrow{color:#FFCD00}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus .home-intro{background:rgb(24 43 73 / .55)}
+:root:is([data-alt=navy],[data-alt=whitebar]) .home-hero--campus .home-intro>.prose{color:#F0F3F7}
+@media(max-width:650px){:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) .record-heading{padding-block:32px 26px}}
+
+/* I · White masthead + navy bands: pure white header (E look), navy title bands over photos (H look). */
+:root[data-alt=whitebar] .site-header{background:#FFFFFF}
+
+/* Primary navigation: slightly larger and bolder in every design. */
+.site-header nav a{font-family:inherit;font-size:clamp(15px,1.5vw,17px);font-weight:400;letter-spacing:normal;font-synthesis:none}
+@media(min-width:851px){.site-header nav a{white-space:nowrap}}
+.site-header nav{gap:clamp(12px,1.6vw,26px)}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]):not([data-alt=navy]) .site-header nav a{color:#182B49}
+:root:is([data-design=ucsd-light],[data-design=ucsd-light-banner]):not([data-alt=navy]) .site-header nav a:hover{color:#00629B}
+
+/* Funded-project cards: titles are short, so give the text block more room. */
+.card-copy:has(.card-sponsor){padding-block:30px 34px}
+.card-copy:has(.card-sponsor) .card-sponsor{margin-bottom:12px}
+.card-copy:has(.card-sponsor) h2{line-height:1.25;margin:0 0 16px}
+
+.project-full-title{margin:0 0 12px;color:var(--muted)}
+.project-full-title strong{color:var(--text)}
+.site-header nav a{font-weight:500;letter-spacing:-.035em}
+
+/* Index pages: band text follows the card grid (the full wrap), not the 1360px research column. */
+:root:is([data-alt=bleed],[data-alt=navy],[data-alt=whitebar]) .index-page .record-heading{padding-inline:calc(50vw - 50%)}
+
+.portrait-link{display:block;text-decoration:none;color:inherit;cursor:pointer}
+.portrait-link:hover .portrait{border-color:var(--link,#00629B)}
+.people-section:not(.people-section--alumni) .person-card .portrait-link{grid-row:1 / span 2}
+
+/* Distribution statements inside the dark title band. */
+:root:is([data-alt=navy],[data-alt=whitebar]) .record-heading .public-release{color:#DCE5EF;font-size:13px;margin-top:10px}

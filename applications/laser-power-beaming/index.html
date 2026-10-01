@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en" data-design="ucsd-light-banner" data-alt="whitebar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Laser-powered aircraft · LSDO Lab</title><meta name="description" content="Aircraft design coupled to an externally supplied energy source."><link rel="stylesheet" href="../../assets/site.css"><script defer src="../../assets/site.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html"><img class="brand-logo brand-logo--default" src="../../assets/brand/ucsd-mae-white.svg" alt="UC San Diego Mechanical and Aerospace Engineering"><img class="brand-logo brand-logo--ucsd-light" src="https://jacobsschool.ucsd.edu/sites/default/files/groups/jsoe/img/logos/mae/digital/UCSDLogo-JSOE-MechanicalandAerospaceEngineering-BlueGold.png" alt="UC San Diego Mechanical and Aerospace Engineering"><span class="brand-lab">LSDO Lab</span></a><nav aria-label="Main navigation"><a href="../../index.html" >Home</a><a href="../../methods/index.html" >Methods</a><a href="../index.html" aria-current="page">Applications</a><a href="../../software/index.html" >Software</a><a href="../../projects/index.html" >Funded projects</a><a href="../../publications/index.html" >Publications</a><a href="../../people/index.html" >People</a><a href="../../join/index.html" >Join</a></nav></div></header>
+<main id="main"><div class="wrap record record--research"><div class="record-heading"><a class="eyebrow" href="../index.html">Applications</a><p class="application-domain">Aerospace</p><h1>Laser-powered aircraft</h1><p class="application-design-type">Vehicle sizing</p></div>
+
+<div class="prose"><p>We apply multidisciplinary design optimization (MDO) to aircraft powered by a ground-based laser. Replacing much of the onboard energy supply changes conventional sizing tradeoffs: receiver geometry, thermal dissipation, flight conditions, and backup energy storage must be considered together.</p>
+<h2>Identifying the requirements that drive mass</h2>
+<p>Physics-based sizing and parameter sweeps reveal how payload, altitude, onboard endurance, and distance from the laser affect the preferred design. In the modeled scenario, aircraft mass changes little with source distance until roughly 600 km, then rises sharply, identifying a regime where transmission distance becomes a dominant sizing concern.</p>
+<p>Paper: <a href="../../publications/orndorff2023gradient/index.html">Orndorff et al.</a> <a aria-label="Reference 1: Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft" class="citation" href="#ref-orndorff2023gradient">[1]</a></p>
+<h2>Accounting for uncertain flight conditions</h2>
+<p>A separate uncertainty-aware formulation produces a design more robust to the modeled flight-condition variations than the deterministic optimum. Graph acceleration cuts the reported uncertainty-aware optimization time by a factor of five, making it about twice the deterministic optimization cost in that study.</p>
+<p>Paper: <a href="../../publications/wang2024grapha/index.html">Wang et al.</a> <a aria-label="Reference 2: Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft" class="citation" href="#ref-wang2024grapha">[2]</a></p></div>
+
+<figure class="research-figure"><video autoplay muted loop controls playsinline preload="metadata" aria-label="Animation of the laser-powered aircraft model used in the sizing study."><source src="../../assets/page-media/application/laser-power-beaming/laser-uav-video.mp4" type="video/mp4">Your browser cannot play this video. <a href="../../assets/page-media/application/laser-power-beaming/laser-uav-video.mp4">Download video</a></video><figcaption><span class="caption-text">The laser-powered aircraft model used for gradient-based sizing studies. <a aria-label="Reference 1: Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft" class="citation" href="#ref-orndorff2023gradient">[1]</a> <a href="../../publications/orndorff2023gradient/index.html">Source paper</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/laser-power-beaming/laser-uav-parameter-sweeps.png" aria-label="View full-size figure: Parameter sweeps showing the optimized aircraft mass as altitude and horizontal distance from the laser vary."><img src="../../assets/page-media/application/laser-power-beaming/laser-uav-parameter-sweeps.png" alt="Parameter sweeps showing the optimized aircraft mass as altitude and horizontal distance from the laser vary." loading="lazy" ></a><figcaption><span class="caption-text">Adjoint-based sizing sweeps show how altitude and horizontal distance from the laser change optimized aircraft mass. <a aria-label="Reference 1: Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft" class="citation" href="#ref-orndorff2023gradient">[1]</a> <a href="../../publications/orndorff2023gradient/index.html">Source paper</a></span></figcaption></figure><figure class="research-figure"><a href="../../assets/page-media/application/laser-power-beaming/laser-uav-mdouu.png" aria-label="View full-size figure: Overlaid MDO-optimized and uncertainty-aware optimized laser-powered aircraft configurations."><img src="../../assets/page-media/application/laser-power-beaming/laser-uav-mdouu.png" alt="Overlaid MDO-optimized and uncertainty-aware optimized laser-powered aircraft configurations." loading="lazy" ></a><figcaption><span class="caption-text">The MDO and uncertainty-aware optimized configurations differ; graph-accelerated uncertainty propagation holds reported MDOUU optimization cost to roughly twice that of deterministic MDO. <a aria-label="Reference 2: Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft" class="citation" href="#ref-wang2024grapha">[2]</a> <a href="../../publications/wang2024grapha/index.html">Source paper</a></span></figcaption></figure>
+
+
+<section class="problem-section" aria-labelledby="problem-title">
+  <h2 id="problem-title">Optimization problem</h2>
+  <div class="problem-matrix-wrap" tabindex="0" aria-label="Scrollable optimization formulation table">
+    
+    
+    <table class="problem-formulation-table">
+      <caption>Optimization formulation</caption>
+      <thead>
+        <tr>
+          <th scope="col">Formulation element</th>
+          <th scope="col">MDOUU</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Case</th><td colspan="1">Robust laser-beam-powered aircraft MDOUU</td></tr>
+        <tr><th scope="row">Objective</th><td>Minimize mean plus three standard deviations of aircraft total weight.</td></tr>
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Design variables</th></tr>
+        
+        <tr>
+          <th scope="row">Wing span scaling</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tail span scaling</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Tail incidence</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Pitch angle</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Mach number</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Rotor speed</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Aperture diameter</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Wing-beam cap thickness</th>
+          <td class="problem-count">14</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Wing-beam web thickness</th>
+          <td class="problem-count">14</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total design variables</th><td class="problem-count">35</td></tr>
+        
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Random inputs</th></tr>
+        
+        <tr>
+          <th scope="row">Altitude — Uniform(4,000–6,000 m)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Horizontal distance — Uniform(220–280 km)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Payload weight — Uniform(40–60 kg)</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total random inputs</th><td class="problem-count">3</td></tr>
+        
+        
+        <tr class="problem-matrix-section"><th scope="rowgroup" colspan="2">Constraints</th></tr>
+        
+        <tr>
+          <th scope="row">Robust optical-power residual</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Robust trim residual</th>
+          <td class="problem-count">1</td>
+        </tr>
+        
+        <tr>
+          <th scope="row">Robust maximum stress</th>
+          <td class="problem-count">70</td>
+        </tr>
+        
+        <tr class="problem-matrix-total"><th scope="row">Total constraints</th><td class="problem-count">72</td></tr>
+        
+        
+        <tr><th scope="row">Models and conditions</th><td colspan="1">Coupled laser-power transmission, vortex-lattice aerodynamics, blade-element momentum propulsion, beam structures, and thermal dissipation with independent uniform uncertainty in altitude, horizontal distance, and payload weight.</td></tr>
+        <tr><th scope="row">Representative source</th><td colspan="1"><a href="../../publications/wang2024grapha/index.html">Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft</a></td></tr>
+        <tr><th scope="row">Source locator</th><td colspan="1">Table 2, page 6.</td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+<section class="bibliography" id="references" aria-label="References"><h2>References</h2><ol><li id="ref-orndorff2023gradient"><span>Nicholas C. Orndorff, Bingran Wang, Marius L. Ruh, Andrew H. Fletcher, John T. Hwang.</span> <a href="../../publications/orndorff2023gradient/index.html">Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft</a>. <em>AIAA AVIATION 2023 Forum, p. 4019</em>, 2023.<div class="paper-actions"><a href="https://doi.org/10.2514/6.2023-4019">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/orndorff2023gradient/orndorff2023gradient--submitted-manuscript--42023f1b0e5a.pdf">PDF</a><pre hidden>@inproceedings{orndorff2023gradient,
+  author = {Nicholas C. Orndorff and Bingran Wang and Marius L. Ruh and Andrew H. Fletcher and John T. Hwang},
+  title = {Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft},
+  booktitle = {AIAA AVIATION 2023 Forum},
+  pages = {4019},
+  year = {2023},
+  doi = {10.2514/6.2023-4019},
+  url = {https://doi.org/10.2514/6.2023-4019}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for Gradient-Based Sizing Optimization of Power-Beaming-Enabled Aircraft">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li><li id="ref-wang2024grapha"><span>Bingran Wang, Nicholas C. Orndorff, Anugrah J. Joshy, John T. Hwang.</span> <a href="../../publications/wang2024grapha/index.html">Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft</a>. <em>AIAA SCITECH 2024 Forum</em>, 2024.<div class="paper-actions"><a href="https://doi.org/10.2514/6.2024-0169">DOI</a><a href="https://lsdolab.github.io/lsdo-publications/pdf/wang2024grapha/wang2024grapha--publisher-version--d07291d5fd78.pdf">PDF</a><pre hidden>@inproceedings{wang2024grapha,
+  author = {Bingran Wang and Nicholas C. Orndorff and Anugrah J. Joshy and John T. Hwang},
+  title = {Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft},
+  booktitle = {AIAA SCITECH 2024 Forum},
+  year = {2024},
+  doi = {10.2514/6.2024-0169},
+  url = {https://doi.org/10.2514/6.2024-0169},
+  note = {Metadata verification: Crossref DOI}
+}</pre><button class="copy-bib" type="button" aria-label="Copy BibTeX for Graph-accelerated large-scale multidisciplinary design optimization under uncertainty of a laser-beam-powered aircraft">Copy BibTeX</button><span class="copy-status" role="status"></span></div></li></ol></section><section class="connections" aria-label="Research connected to Laser-powered aircraft"><div class="connections-heading"><p class="eyebrow">Research connections</p><h2>Related to Laser-powered aircraft</h2></div><div class="link-group link-group-method"><h3>Methods</h3><ul><li><a href="../../methods/geometry-parameterization/index.html">Geometry parameterization</a></li><li><a href="../../methods/graph-accelerated-ouu/index.html">MDO under uncertainty</a></li><li><a href="../../methods/graph-native-modeling/index.html">Graph-native modeling</a></li></ul></div><div class="link-group link-group-software"><h3>Software</h3><ul><li><a href="../../software/caddee/index.html">CADDEE</a></li><li><a href="../../software/csdl/index.html">CSDL</a></li><li><a href="../../software/lsdo-geo/index.html">lsdo_geo</a></li></ul></div><div class="link-group link-group-person"><h3>Authors of related work</h3><ul><li><a href="../../people/andrew-fletcher/index.html">Andrew H. Fletcher</a></li><li><a href="../../people/anugrah-joshy/index.html">Anugrah Jo Joshy</a></li><li><a href="../../people/john-hwang/index.html">John T. Hwang</a></li><li><a href="../../people/marius-ruh/index.html">Marius L. Ruh</a></li><li><a href="../../people/nicholas-orndorff/index.html">Nicholas C. Orndorff</a></li></ul></div><div class="link-group link-group-project"><h3>Funded projects</h3><ul><li><a href="../../projects/darpa-yfa/index.html">Large-scale MDO of power-beaming-enabled air platforms</a></li></ul></div></section></div></main><footer><div><strong>Large-Scale Design Optimization Laboratory</strong><p>Department of Mechanical and Aerospace Engineering<br>University of California San Diego</p></div><div class="footer-links"><a href="../../join/index.html">Join the lab</a><a href="../../publications/index.html">Publications</a><a href="https://github.com/LSDOlab">GitHub</a></div></footer></body></html>

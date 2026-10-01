@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-design="ucsd-light-banner" data-alt="whitebar"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark light"><title>Racing quadcopters · LSDO Lab</title><meta name="description" content="Vehicle and trajectory co-design for minimum-time flight through constrained courses."><link rel="stylesheet" href="../../assets/site.css"><script defer src="../../assets/site.js"></script></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html"><img class="brand-logo brand-logo--default" src="../../assets/brand/ucsd-mae-white.svg" alt="UC San Diego Mechanical and Aerospace Engineering"><img class="brand-logo brand-logo--ucsd-light" src="https://jacobsschool.ucsd.edu/sites/default/files/groups/jsoe/img/logos/mae/digital/UCSDLogo-JSOE-MechanicalandAerospaceEngineering-BlueGold.png" alt="UC San Diego Mechanical and Aerospace Engineering"><span class="brand-lab">LSDO Lab</span></a><nav aria-label="Main navigation"><a href="../../index.html" >Home</a><a href="../../methods/index.html" >Methods</a><a href="../index.html" aria-current="page">Applications</a><a href="../../software/index.html" >Software</a><a href="../../projects/index.html" >Funded projects</a><a href="../../publications/index.html" >Publications</a><a href="../../people/index.html" >People</a><a href="../../join/index.html" >Join</a></nav></div></header>
+<main id="main"><div class="wrap record record--research"><div class="record-heading"><a class="eyebrow" href="../index.html">Applications</a><p class="application-domain">Aerospace</p><h1>Racing quadcopters</h1><p class="application-design-type">Vehicle–trajectory co-design</p></div>
+
+<div class="prose"><p>We apply vehicle and trajectory co-design to quadcopters flying through gates and around obstacles. The fastest feasible path depends on propulsion, mass, and rotor geometry, so a trajectory optimized for one vehicle need not suit another.</p>
+<h2>Designing the vehicle for the course</h2>
+<p>The study combines differentiable flight and propulsion models with direct collocation and geometric path constraints. Comparisons across gate courses illustrate how the preferred vehicle configuration changes with the maneuvering task, linking hardware choices to the flight profile they enable.</p>
+<p>Study: Soliman Villapando, <em>Simultaneous Vehicle and Trajectory Optimization of Unmanned Aerial Vehicles in Constrained Environments</em>, master's thesis presentation.</p></div>
+
+<figure class="research-figure"><video autoplay muted loop controls playsinline preload="metadata" aria-label="Minimum-time quadcopter trajectory optimization through a sequence of racing gates."><source src="../../assets/page-media/application/drone-racing/drone-racing-trajectory.mp4" type="video/mp4">Your browser cannot play this video. <a href="../../assets/page-media/application/drone-racing/drone-racing-trajectory.mp4">Download video</a></video><figcaption><span class="caption-text">Vehicle and trajectory co-design produces a minimum-time quadcopter flight through constrained gate courses. Villapando, master's thesis presentation.</span></figcaption></figure><figure class="research-figure"><video autoplay muted loop controls playsinline preload="metadata" aria-label="Evolution of quadcopter design variables during vehicle and trajectory optimization."><source src="../../assets/page-media/application/drone-racing/drone-racing-design-evolution.mp4" type="video/mp4">Your browser cannot play this video. <a href="../../assets/page-media/application/drone-racing/drone-racing-design-evolution.mp4">Download video</a></video><figcaption><span class="caption-text">The co-designed quadcopter configuration evolves together with its optimized flight trajectory. Villapando, master's thesis presentation.</span></figcaption></figure>
+
+
+<section class="problem-section" aria-labelledby="problem-title">
+  <h2 id="problem-title">Optimization problem</h2>
+  <div class="problem-matrix-wrap" tabindex="0" aria-label="Scrollable optimization formulation table">
+    
+    <table class="problem-formulation-table problem-formulation-table--single">
+      <caption>Optimization formulation</caption>
+      <tbody>
+        
+        <tr><th scope="row">Case</th><td>Quadrotor co-design for gate and obstacle courses</td></tr>
+        
+        <tr><th scope="row">Objective</th><td>Minimize course completion time.</td></tr>
+        
+        <tr><th scope="row">Design variables</th><td>14 vehicle variables: motor mass, battery mass, arm length, rotor radius, five blade-twist values, and five blade-chord values; trajectory states, controls, and final time.</td></tr>
+        
+        <tr><th scope="row">Constraints</th><td>Collocation dynamics and initial/final conditions; rotor speed between 0 and 30,000 RPM; motor torque, motor power, and battery power limits; gate-crossing and obstacle-avoidance conditions.</td></tr>
+        
+        <tr><th scope="row">Models and conditions</th><td>Rigid-body flight dynamics, quasi-steady rotor inflow, and electromechanical scaling models, with aerodynamic loads evaluated in BladeAD and derivatives computed in CSDL.</td></tr>
+        
+        <tr><th scope="row">Representative source</th><td>Soliman S. Villapando, Simultaneous Vehicle and Trajectory Optimization of Unmanned Aerial Vehicles in Constrained Environments, master’s thesis presentation.</td></tr>
+        
+      </tbody>
+    </table>
+    
+  </div>
+</section>
+
+
+<section class="connections" aria-label="Research connected to Racing quadcopters"><div class="connections-heading"><p class="eyebrow">Research connections</p><h2>Related to Racing quadcopters</h2></div><div class="link-group link-group-method"><h3>Methods</h3><ul><li><a href="../../methods/geometry-parameterization/index.html">Geometry parameterization</a></li><li><a href="../../methods/graph-native-modeling/index.html">Graph-native modeling</a></li></ul></div><div class="link-group link-group-software"><h3>Software</h3><ul><li><a href="../../software/bladead/index.html">BladeAD</a></li><li><a href="../../software/csdl/index.html">CSDL</a></li></ul></div></section></div></main><footer><div><strong>Large-Scale Design Optimization Laboratory</strong><p>Department of Mechanical and Aerospace Engineering<br>University of California San Diego</p></div><div class="footer-links"><a href="../../join/index.html">Join the lab</a><a href="../../publications/index.html">Publications</a><a href="https://github.com/LSDOlab">GitHub</a></div></footer></body></html>
